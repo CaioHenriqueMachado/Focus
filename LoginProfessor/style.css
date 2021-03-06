@@ -52,29 +52,10 @@
 
 #sub-container #bot {
   padding: 20px;
-  display: flex;
-  justify-content: space-around;
-}
-
-#sub-container #bot a.cadastro {
-  width: 20rem;
-  height: 7.4rem;
-  border-radius: 0.8rem;
-  font: 700 2.5rem Archivo;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-  color: var(--color-button-text);
-
-  transition: background-color 0.2s;
-  background: var(--color-primary-lighter);
 }
 
 #sub-container #bot a.entrar {
-  width: 20rem;
+  width: 25rem;
   height: 7.4rem;
   border-radius: 0.8rem;
   font: 700 2.5rem Archivo;

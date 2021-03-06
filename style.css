@@ -4,10 +4,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   color: var(--color-text-in-primary);
   background: var(--color-primary);
 }
+
+#page-landing #btn-administrador{
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#page-landing #btn-administrador a{
+  width: 18rem;
+  height: 3.2rem;
+  padding-top: 3px;
+  border-radius: 0.8rem;
+  font: 700 2.4rem Archivo;
+  text-decoration: none;
+  text-align: center;
+  background: var(--color-secundary);
+  color: var(--color-button-text);
+  transition: background-color 0.2s;
+}
+
+#page-landing #btn-administrador a:hover{
+  background: var(--color-secundary-dark);
+}
+
+
+
 
 .logo-container img {
   height: 10rem;
@@ -87,8 +113,8 @@
 
 @media (min-width: 800px) {
   #page-landing-content {
+    position: relative;
     max-width: 1100px;
-
     display: grid;
     grid-template-rows: 350px 1fr;
     grid-template-columns: 2fr 1fr 1fr;
