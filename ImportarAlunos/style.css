@@ -209,11 +209,3 @@ div#first {
     margin-top: 0;
   }
 }
-
-input, select {
-  width: 200px;
-}
-textarea {
-  min-width: 200px;
-  min-height: 70px;
-}

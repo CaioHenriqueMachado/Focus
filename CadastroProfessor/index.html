@@ -14,51 +14,44 @@
   <div id="page-teacher-form" class="container">
     <header class="page-header">
       <div class="top-bar-container">
-        <a href="../index.html">
+        <a href="../HomeAdministrador/index.html">
           <img src="../images/icons/back.svg" alt="Voltar" />
         </a>
         <h1>FOCUS</h1>
       </div>
 
-      <div class="header-content">
-        <strong>Que incrivel que você quer dar aulas</strong>
-        <p>O primeiro passo é preencher esse formulário de inscrição</p>
-      </div>
-
-
     </header>
 
     <main>
       <form>
+        <div id="first">CADASTRAR NOVO PROFESSOR</div>
         <fieldset>
-          <legend>Seus dados</legend>
+          <legend>Prencha os dados do professor</legend>
           <p>Nome</p>
           <Input name="nome" type="str" />
           <br><br>
-          <p>Sobrenome</p>
-          <Input name="sobrenome" />
+          <p>E-mail</p>
+          <Input name="email" type="email"/>
           <br><br>
-          <p>CPF</p>
-          <Input name="cpf" type="value" />
+          <p>Senha</p>
+          <Input name="senha" type="password"/>
           <br><br>
-          <p>Data de Nascimento</p>
-          <Input name="nascimento" type="date" />
+          <p>Nome do Pai</p>
+          <Input name="pai" />
           <br><br>
-          <p>Genero</p>
-          <Input name="genero" type="radio" value="masc" />Masculino
-          <Input name="genero" type="radio" value="femi" />Feminino
+          <p>Nome da mãe</p>
+          <Input name="mae" />
           <br><br>
-          <p>Biografia</p>
-          <Textarea name="Biografia"></Textarea>
-
-        </fieldset>
-
-        <fieldset>
-          <legend>Sobre a aula</legend>
-          <p>Nome</p>
-          <Input name="nome" type="str" />
+          <p>Telefone</p>
+          <Input name="telefone" type="number"/>
           <br><br>
-          <p>Salas</p>
+          <p>Endereço</p>
+          <Input name="endereço" />
+          <br><br>
+          <p>RA</p>
+          <Input name="ra" />
+          <br><br>
+          <p>Turma</p>
           <select name="Classe" id="classe">
             <option value="1">1° ano</option>
             <option value="2">2° ano</option>
@@ -71,49 +64,12 @@
             <option value="9">9° ano</option>
             <10° value="10">10° ano</option>
           </select>
-
+          <br><br>
+          <p>Grade de Aulas</p>
+          <Textarea name="Biografia"></Textarea>
         </fieldset>
 
-        <fieldset>
-          <legend>Crie seu Atavar</legend>
-          <p>Nome</p>
-          <Input name="nome" type="str" />
-          <br><br>
-          <p>Para qual turma irá dar aula ?</p>
-          <select name="Classe" id="classe">
-            <option value="1">1° ano</option>
-            <option value="2">2° ano</option>
-            <option value="3">3° ano</option>
-            <option value="3">4° ano</option>
-            <option value="4">5° ano</option>
-            <option value="5">6° ano</option>
-            <option value="7">7° ano</option>
-            <option value="8">8° ano</option>
-            <option value="9">9° ano</option>
-            <option value="10">10° ano</option>
-          </select>
-          <br><br>
-          <p>Cor do cabelo</p>
-          <Input name="cabelo" type="radio" value="loiro" />Loiro &nbsp;
-          <Input name="cabelo" type="radio" value="moreno" />Moreno &nbsp;
-          <Input name="cabelo" type="radio" value="ruivo" />Ruivo &nbsp;
-          <br><br>
-          <p>Cor do Pele</p>
-          <Input name="pele" type="radio" value="branca" />Branca &nbsp;
-          <Input name="pele" type="radio" value="parda" />Parda &nbsp;
-          <Input name="pele" type="radio" value="escura" />Escura &nbsp;
-          <br><br>
-          <p>Camisa</p>
-          <Input name="camisa" type="radio" value="sem_manga" />Sem manga &nbsp;
-          <Input name="camisa" type="radio" value="com_manga" />Com manga &nbsp;
-          <Input name="camisa" type="radio" value="manga_longa" />Manga longa &nbsp;
-          <br><br>
-          <p>Calça</p>
-          <Input name="calça" type="radio" value="bermuda" />Bermuda &nbsp;
-          <Input name="calça" type="radio" value="calça" />Calça &nbsp;
-          <Input name="calça" type="radio" value="saia" />Saia &nbsp;
-        </fieldset>
-
+        
         <footer>
           <p>
             <img src="../images/icons/warning.svg" alt="Aviso importante" />

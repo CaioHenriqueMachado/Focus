@@ -14,53 +14,44 @@
   <div id="page-teacher-form" class="container">
     <header class="page-header">
       <div class="top-bar-container">
-        <a href="../index.html">
+        <a href="../HomeAdministrador/index.html">
           <img src="../images/icons/back.svg" alt="Voltar" />
         </a>
         <h1>FOCUS</h1>
       </div>
 
-      <div class="header-content">
-        <strong>Que incrivel que você quer ter aulas</strong>
-        <p>O primeiro passo é preencher esse formulário de inscrição</p>
-      </div>
-
-
     </header>
 
     <main>
       <form>
+        <div id="first">CADASTRAR NOVO ALUNO</div>
         <fieldset>
-          <legend>Seus dados</legend>
+          <legend>Prencha os dados do aluno</legend>
           <p>Nome</p>
           <Input name="nome" type="str" />
           <br><br>
-          <p>Sobrenome</p>
-          <Input name="sobrenome" />
+          <p>E-mail</p>
+          <Input name="email" type="email"/>
           <br><br>
-          <p>CPF</p>
-          <Input name="cpf" type="value" />
+          <p>Senha</p>
+          <Input name="senha" type="password"/>
           <br><br>
-          <p>Data de Nascimento</p>
-          <Input name="nascimento" type="date" />
+          <p>Nome do Pai</p>
+          <Input name="pai" />
           <br><br>
-          <p>Genero</p>
-          <Input name="genero" type="radio" value="masc" />Masculino
-          <Input name="genero" type="radio" value="femi" />Feminino
+          <p>Nome da mãe</p>
+          <Input name="mae" />
           <br><br>
-          <p>Biografia</p>
-          <Textarea name="Biografia"></Textarea>
-
-        </fieldset>
-
-        <fieldset>
-          <legend>Sobre a aula</legend>
-
-          <p>Registro do Aluno:</p>
+          <p>Telefone</p>
+          <Input name="telefone" type="number"/>
+          <br><br>
+          <p>Endereço</p>
+          <Input name="endereço" />
+          <br><br>
+          <p>RA</p>
           <Input name="ra" />
           <br><br>
-
-          <p>Em que turma você esta ?</p>
+          <p>Turma</p>
           <select name="Classe" id="classe">
             <option value="1">1° ano</option>
             <option value="2">2° ano</option>
@@ -73,7 +64,9 @@
             <option value="9">9° ano</option>
             <10° value="10">10° ano</option>
           </select>
-
+          <br><br>
+          <p>Grade de Aulas</p>
+          <Textarea name="Biografia"></Textarea>
         </fieldset>
 
         
