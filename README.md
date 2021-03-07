@@ -28,22 +28,19 @@ IMPORTAR LISTA DE ALUNOS
 
 
 
-PROFESSORES
+
+ATIVIDADE
+Aqui é o feed de noticias, vai mostrar se tem atividades novas para fazer, reunião, etc... (Para determinados eventos)
 
 
-LISTA PROFESSORES
-
-CADASTRAR PROFESSORES
-
-IMPORTAR PROFESSORES
+EQUIPE
+Aqui tem as matérias e grupos separado por matéria. Os alunos só conversam com as pessoas da mesma sala.
 
 
+TRABALHO
+Aqui é onde mostra os trabalhos que tem para fazer.
 
-HISTÓRIAS / JOGOS / ANIMAÇÕES
 
-LISTA HISTÓRIAS
-
-CADASTRAR HISTÓRIAS
-
-IMPORTAR HISTÓRIAS
+CHAT
+Chat é onde você consegue conversar com todos alunos.
 
