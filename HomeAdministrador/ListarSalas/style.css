@@ -244,29 +244,37 @@ div.nome {
   
 }
 
-div.cnpj {
+div.serie {
+  border: 1px solid black;
+  width: 100px;
+  padding-left: 10px;
+  text-align: center;
+}
+
+div.professor {
   border: 1px solid black;
   width: 150px;
   padding-left: 10px;
 }
 
-div.email {
+div.instituicao {
   border: 1px solid black;
   width: 250px;
   padding-left: 10px;
-  justify-content: center;
 }
 
-div.responsavel {
+div.data_inicio {
   border: 1px solid black;
-  width: 200px;
+  width: 150px;
   padding-left: 10px;
+  text-align: center;
 }
 
-div.endereco {
+div.data_fim {
   border: 1px solid black;
-  width: 200px;
+  width: 150px;
   padding-left: 10px;
+  text-align: center;
 }
 
 
