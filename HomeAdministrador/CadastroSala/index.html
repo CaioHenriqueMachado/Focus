@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../../styleDefault.css">
+  <title>Gamificação</title>
+</head>
+
+<body>
+  <div id="page-teacher-form" class="container">
+    <header class="page-header">
+      <div class="top-bar-container">
+        <a href="../index.html">
+          <img src="../../images/icons/back.svg" alt="Voltar" />
+        </a>
+        <h1>FOCUS</h1>
+      </div>
+
+    </header>
+
+    <main>
+      <form>
+        <div id="first">CADASTRAR NOVA TURMA</div>
+        <fieldset>
+          <legend>Prencha os dados da Sala</legend>
+          <p>Nome</p>
+          <Input name="nome" type="str" />
+          <br><br>
+          <p>Série</p>
+          <Input name="serie" type="number" min="1" max="5" id="serie"/> ° ano
+          <br><br>
+          <p>Professor</p>
+          <select name="professor" id="professor">
+            <option value="0">SELECIONE</option>
+            <option value="1">Paulo Henrique</option>
+            <option value="2">Carla Petri</option>
+            <option value="3">Paola Andrade</option>
+          </select>
+          <br><br>
+          <p>Data inicio</p>
+          <Input name="ano" type="date"/>
+          <br><br>
+          <p>Data fim</p>
+          <Input name="ano" type="date"/>
+          <br><br>
+          <p>Instituição</p>
+          <select name="instituicao" id="instituicao">
+            <option value="0">SELECIONE</option>
+            <option value="1">Colégio Objetivo</option>
+            <option value="2">Colégio Santo Agostinho</option>
+            <option value="3">Colégio Cristão AMA</option>
+          </select>
+          <br><br>
+        </fieldset>
+
+        
+        <footer>
+          <p>
+            <img src="../../images/icons/warning.svg" alt="Aviso importante" />
+            Importante! <br />
+            Preencha todos os dados
+          </p>
+          <button type="submit">
+            Salva cadastro
+          </button>
+        </footer>
+      </form>
+    </main>
+
+  </div>
+</body>
+
+</html>
