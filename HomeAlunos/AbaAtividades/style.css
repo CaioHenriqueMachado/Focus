@@ -144,7 +144,13 @@ div.background div.buttonCreate {
   color: white;
   font-size: 14pt;
   font-weight: bold;
+  cursor: pointer;
 }
+
+div.background div.buttonCreate:active {
+  background-color: violet;
+}
+
 
 
 div.background div.box {
@@ -156,6 +162,7 @@ div.background div.box {
   
   border: 3px solid black;
   background-color: var(--color-primary);
+  
 }
 
 div.background div.box h3 {
@@ -182,6 +189,7 @@ div.background div.box div.backWhite div.itemTarefa {
   border-radius: 10px;
   margin-top: 5px;
   border: 3px solid black;
+  cursor: pointer;
 
 }
 
