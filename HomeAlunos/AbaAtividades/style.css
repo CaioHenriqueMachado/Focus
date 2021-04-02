@@ -115,10 +115,6 @@
 }
 
 
-/* 
-#page-teacher-form main div#background div#timeLine {
-  background-color: cadetblue;
-} */
 
 #page-teacher-form main div#background div#timeLine div#title {
 display: flex;
@@ -126,110 +122,75 @@ justify-content: center;
 align-items: center;
 padding: 15px 0px;
 font: 700 3rem white;
-border-bottom: 1px solid black;
 }
 
-#page-teacher-form main div#background div#timeLine div#line {
+div.background{
   display: flex;
-  height: 20px;
-  background: var(--color-primary);
+  justify-content: space-between;
+  padding: 20px;
 }
 
-#page-teacher-form main div#background div#timeLine div#line div#line_1 {
-  width: 40%;
-  border: 2px solid black;
-}
 
-#page-teacher-form main div#background div#timeLine div#line div#line_2 {
-  width: 100%;
-  border: 2px solid black;
-}
 
-#page-teacher-form main div#background div#timeLine div#back-content {
+div.background div.buttonCreate {
+  width: 260px;
+  height: 60px;
   display: flex;
-  width: 100%;
-}
-
-#page-teacher-form main div#background div#timeLine div#back-content div#aside {
-  width: 40%;
-  height: 350px;
-  border: 1px solid black;
-}
-
-div#aside div.blocks-chat a {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  padding: 5px 0;
-  border: 1px solid black;
-  color: gray;
-  transition: 0.3s;
-}
-
-div#aside div.blocks-chat a:hover {
-  color: black;
-  background-color: gray;
-}
-
-div#aside div.blocks-chat div.image {
-  display: flex;
-  width: 50px;
-  height: 100%;
-  border-radius: 50px;
-  margin: 0 10px;
-}
-
-div#aside div.blocks-chat div.image img {
-  width: 100%;
-  height: 100%;
-}
-
-div#aside div.blocks-chat div.conversas {
-  width: 100%;
-  height: 100%;
-
-}
-
-div#aside div.blocks-chat div.timer {
-  display: flex;
-  width: 50px;
-  height: 100%;
-  margin: 0 5px;
-}
-
-
-
-div#conteudo div.title {
-  display: flex;
-  padding: 5px;
   align-items: center;
-  background-color: rgba(128, 128, 128, 0.398);
-  border-bottom: 1px solid black;
-  margin-bottom: 15px;
-}
-
-div#conteudo div.title div {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  margin-right: 15px;
-}
-
-div#conteudo div.title div img {
-  width: 100%;
-  height: 100%;
-}
-
-div#conteudo p.talk {
-  display: flex;
-  width: 220px;
-  background-color: rgba(128, 128, 128, 0.535);
-  padding: 10px;
-  margin-left: 15px;
+  justify-content: center;
   border-radius: 10px;
-  border-bottom-left-radius: 0px;
-  color: black;
+  margin-top: 100px;
+  background-color: var(--color-secundary);
+  color: white;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+
+div.background div.box {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  min-height: 350px;
+  border-radius: 10px;
+  
+  border: 3px solid black;
+  background-color: var(--color-primary);
+}
+
+div.background div.box h3 {
+  text-align: center;
+  margin: 5px 0;
+  color: white;
+}
+
+
+
+div.background div.box div.backWhite{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  height: 100%;
+  align-items: center;
+}
+
+
+div.background div.box div.backWhite div.itemTarefa {
+  background-color: #d4c2ff;
+  width: 98%;
+  border-radius: 10px;
+  margin-top: 5px;
+  border: 3px solid black;
+
+}
+
+div.background div.box div.backWhite div.itemTarefa p:first-child {
+  text-align: center;
+}
+
+div.background div.box div.backWhite div.itemTarefa p + p {
+  padding: 0 10px;
 }
 
 
@@ -240,14 +201,6 @@ div#conteudo p.talk {
 
 
 
-
-
-
-
-#page-teacher-form main div#background div#timeLine div#back-content div#conteudo {
-  width: 100%;
-  border: 1px solid black;
-}
 
 
 @media (min-width: 700px) {
@@ -258,3 +211,4 @@ div#conteudo p.talk {
   #page-teacher-form .page-header .header-content {
     margin-bottom: 0;
   }
+}
