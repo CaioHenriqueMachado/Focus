@@ -110,7 +110,7 @@
 }
 
 #page-teacher-form main div#background div#titles div a:hover {
-  background: var(--color-secundary);
+  background: var(--color-secundary-dark);
   border-bottom: 4px solid black;
 }
 
@@ -136,7 +136,7 @@ border-bottom: 1px solid black;
 }
 
 #page-teacher-form main div#background div#timeLine div#line div#line_1 {
-  width: 40%;
+  width: 30%;
   border: 2px solid black;
 }
 
@@ -151,7 +151,7 @@ border-bottom: 1px solid black;
 }
 
 #page-teacher-form main div#background div#timeLine div#back-content div#aside {
-  width: 40%;
+  width: 30%;
   height: 350px;
   border: 1px solid black;
 }
@@ -174,8 +174,8 @@ div#aside div.blocks-chat a:hover {
 
 div#aside div.blocks-chat div.image {
   display: flex;
-  width: 50px;
-  height: 100%;
+  width: 60px;
+  height: 50px;
   border-radius: 50px;
   margin: 0 10px;
 }
@@ -183,6 +183,7 @@ div#aside div.blocks-chat div.image {
 div#aside div.blocks-chat div.image img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 }
 
 div#aside div.blocks-chat div.conversas {
@@ -198,7 +199,9 @@ div#aside div.blocks-chat div.timer {
   margin: 0 5px;
 }
 
-
+div#conteudo {
+  position: relative;
+}
 
 div#conteudo div.title {
   display: flex;
@@ -219,6 +222,7 @@ div#conteudo div.title div {
 div#conteudo div.title div img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 }
 
 div#conteudo p.talk {
@@ -234,13 +238,38 @@ div#conteudo p.talk {
 
 
 
+div#conteudo div.toTalk {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background-color: gray;
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+}
 
+div#conteudo div.toTalk input.whiteBar {
+  display: flex;
+  width: 80%;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: white;
+  outline: 0;
+  padding: 0 20px;
+  margin: 0 20px;
+  color: black;
+}
 
+div#conteudo div.toTalk div.buttonEnter {
+  width: 30px;
+  height: 30px;
+}
 
-
-
-
-
+div#conteudo div.toTalk div.buttonEnter img {
+  width: 100%;
+  height: 100%;
+}
 
 
 
