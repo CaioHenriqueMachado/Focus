@@ -10,9 +10,9 @@
   <title>Gamificação</title>
 </head>
 
-<body>
+<body id="backgroundBody">
   <div id="page-teacher-form" class="container">
-    <header class="page-header">
+    <header id="page-header" class="page-header color-primary">
       <div class="top-bar-container">
         <a href="../../index.html">
           <img src="../../images/icons/back.svg" alt="Voltar" />
@@ -47,7 +47,7 @@
           </div>
 
           
-          <div id="line"></div>
+          <div id="line" class="color-primary"></div>
 
           <div id="box-form">
             <div class="box">
@@ -60,8 +60,8 @@
             <div class="box">
               <p>Tema</p>
               <div id="theme">
-                <a href="#" ><div class="theme selected" id="color-puple"></div></a>
-                <div class="theme" id="color-red" onclick="alterTheme(1)"></div>
+                <div class="theme selected" id="color-puple" onclick="alterTheme('#8257e5')"></div>
+                <div class="theme" id="color-red" onclick="alterTheme('#ff0000')"></div>
                 <a href="#"><div class="theme" id="color-blue"></div></a>
                 <a href="#"><div class="theme" id="color-pink"></div></a>
                 <a href="#"><div class="theme" id="color-orange"></div></a>
