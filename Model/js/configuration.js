@@ -27,9 +27,6 @@ function alterAba(id) {
 
 
 var themes = document.getElementsByClassName("theme");
-var abas = document.getElementsByClassName("abas");
-var header  = document.getElementById("page-header");
-var line  = document.getElementById("line");
 var body = document.getElementById("backgroundBody");
 
 
@@ -38,11 +35,16 @@ function alterTheme(colorHex, id) {
     themes[lastTheme].classList.remove("selected");
     themes[id].classList.add("selected");
     lastTheme = id;
-    header.style.transition = "1s";
-    header.style.backgroundColor = colorHex;
-    line.style.backgroundColor = colorHex;
-    body.style.backgroundColor = colorHex + "20";
-    abas.style.
-    console.log(colorHex);
+
+    Array.prototype.forEach.call(document.getElementsByClassName("primary-color"), function(element) {
+        element.style.transition = "1s";
+        element.style.backgroundColor = colorHex;
+    });
+
+    Array.prototype.forEach.call(document.getElementsByClassName("secondary-color"), function(element) {
+        element.style.transition = "1s";
+        element.style.backgroundColor = colorHex + "20";
+    });
+    
 }
 

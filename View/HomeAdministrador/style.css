@@ -1,3 +1,7 @@
+body {
+  background-color: var(--color-text-in-primary);
+}
+
 #page-teacher-list {
   width: 100vw;
   height: 100vh;

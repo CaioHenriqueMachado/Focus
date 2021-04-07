@@ -56,11 +56,6 @@ body,
   background-color: var(--color-text-in-primary);
 } */
 
-body {
-  /* background: var(--color-background); */
-  background-color: var(--color-text-in-primary);
-}
-
 #root {
   display: flex;
   align-items: center;

@@ -1,3 +1,7 @@
+body {
+  background-color: rgba(4, 191, 4, 0.125);
+}
+
 div#abaChat {
     display: none;
 }
@@ -13,9 +17,6 @@ div#abaConfiguracoes {
   }
 
 
-body#backgroundBody {
-  background-color: #04bf0420;
-}
 
 .page-header {
     display: flex;
@@ -120,7 +121,7 @@ body#backgroundBody {
 
 
 #page-teacher-form main div#background div#titles div:hover {
-    background: var(--color-primary-light);
+    background: rgba(128, 128, 128, 0.322);
     border-bottom: 4px solid black;
 }
 
@@ -174,7 +175,7 @@ div.background div.box {
     border-radius: 10px;
     
     border: 3px solid black;
-    background-color: var(--color-primary);
+    background-color: rgb(4, 191, 4);
     
 }
 
@@ -197,7 +198,7 @@ div.background div.box div.backWhite{
 
 
 div.background div.box div.backWhite div.itemTarefa {
-    background-color: #d4c2ff;
+    background-color: rgba(4, 191, 4, 0.125);
     width: 98%;
     border-radius: 10px;
     margin-top: 5px;
@@ -221,7 +222,7 @@ div.background div.box div.backWhite div.itemTarefa p + p {
 #page-teacher-form main div#background div#timeLine div#line {
   display: flex;
   height: 20px;
-  background: var(--color-primary);
+  background-color: rgb(4, 191, 4);
 }
 
 #page-teacher-form main div#background div#timeLine div#line div#line_1 {
