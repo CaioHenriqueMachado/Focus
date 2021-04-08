@@ -22,7 +22,7 @@
     </header>
 
     <div class="photoAvatar"><img id="myAvatar" src="../images/avatar0.png" alt=""></div>
-    <div class="frase">Olá, Aluno</div>
+    <div id="frase">Olá, Aluno</div>
 
     <main>
       <div id="background">
@@ -237,12 +237,14 @@
                   CONFIGURAÇÕES
                 </div>
 
-                <div id="line-config" class="color-primary"></div>
-      
                 <div id="box-form">
                     <div class="box-config">
                         <p>Apelido</p>
-                        <input type="text" name="Apelido" id="">
+                        <div class="inputName">
+                            <input type="text" name="Apelido" id="name">
+                            <div class="buttonSave primary-color" onclick="saveName()" title="Salvar"><img src="../images/icons/saveIcon.png" alt=""></div>
+                        </div>
+                        
                     </div>
                     
                     <div class="box-config">

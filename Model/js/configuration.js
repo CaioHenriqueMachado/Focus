@@ -59,7 +59,16 @@ function alterAvatar(numberAvatar) {
     avatar[numberAvatar].classList.add("selected");
     lastAvatarSelected = numberAvatar;
 
-
     myAvatar.src = `../images/avatar${numberAvatar}.png`;
+}
+
+
+// Salvar nome
+
+
+var frase = document.getElementById("frase");
+function saveName() {
+    var name = document.getElementById("name");
+    frase.innerText = `Olá, ${name.value}!`;
 
 }
