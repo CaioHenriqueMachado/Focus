@@ -499,7 +499,11 @@ div#avatar img {
     height: 100%;
     border-radius: 50%;
     background-size: cover;
+}
 
+.selected {
+  border: 3px solid black !important;
+  filter: brightness(80%);
 }
 
 div.box-config input[type=text] {

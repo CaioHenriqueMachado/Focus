@@ -25,10 +25,10 @@ function alterAba(id) {
 
 
 
+// Selecionar Tema
 
 var themes = document.getElementsByClassName("theme");
 var body = document.getElementById("backgroundBody");
-
 
 var lastTheme = 0;
 function alterTheme(colorHex, id) {
@@ -48,3 +48,18 @@ function alterTheme(colorHex, id) {
     
 }
 
+// Selecionar Avatar
+
+var avatar = document.getElementsByClassName("avatar");
+var myAvatar = document.getElementById("myAvatar");
+
+var lastAvatarSelected = 0;
+function alterAvatar(numberAvatar) {
+    avatar[lastAvatarSelected].classList.remove("selected");
+    avatar[numberAvatar].classList.add("selected");
+    lastAvatarSelected = numberAvatar;
+
+
+    myAvatar.src = `../images/avatar${numberAvatar}.png`;
+
+}

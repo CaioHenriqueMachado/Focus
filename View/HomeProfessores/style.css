@@ -499,6 +499,11 @@ div#avatar img {
 
 }
 
+.selected {
+   border: 3px solid black !important;
+   filter: brightness(80%);
+}
+
 
 div.box-config input[type=text] {
     justify-content: center;
