@@ -1,29 +1,11 @@
-var chat = document.getElementById("abaChat");
-var atividades = document.getElementById("abaAtividades");
-var configuracoes = document.getElementById("abaConfiguracoes");
+var abas = document.getElementsByClassName("btn-aba");
 
+var LastAbaActive = 0;
 function alterAba(id) {
-    
-    if(id == 1) {
-        atividades.style.display = "block";
-        chat.style.display = "none";
-        configuracoes.style.display = "none";
-    }
-
-    if(id == 2) {
-        atividades.style.display = "none";
-        chat.style.display = "block";
-        configuracoes.style.display = "none";
-    }
-
-    if(id == 3) {
-        atividades.style.display = "none";
-        chat.style.display = "none";
-        configuracoes.style.display = "block";
-    }
+    abas[LastAbaActive].style.display = "none";
+    abas[id].style.display = "block";
+    LastAbaActive = id;
 }
-
-
 
 // Selecionar Tema
 
@@ -44,8 +26,7 @@ function alterTheme(colorHex, id) {
     Array.prototype.forEach.call(document.getElementsByClassName("secondary-color"), function(element) {
         element.style.transition = "1s";
         element.style.backgroundColor = colorHex + "20";
-    });
-    
+    }); 
 }
 
 // Selecionar Avatar
@@ -62,13 +43,11 @@ function alterAvatar(numberAvatar) {
     myAvatar.src = `../images/avatar${numberAvatar}.png`;
 }
 
-
 // Salvar nome
 
-
 var frase = document.getElementById("frase");
+
 function saveName() {
     var name = document.getElementById("name");
     frase.innerText = `Olá, ${name.value}!`;
-
 }

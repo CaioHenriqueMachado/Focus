@@ -2,291 +2,239 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="../styleDefault.css">
-  <title>Gamificação</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../styleDefault.css">
+    <title>Gamificação</title>
 </head>
 
 <body class="secondary-color">
-  <div id="page-teacher-form" class="container">
-    <header class="page-header primary-color" >
-      <div class="top-bar-container">
-        <a href="../index.html">
-          <img src="../images/icons/back.svg" alt="Voltar" />
-        </a>
-        <h1>FOCUS</h1>
-      </div>
-    </header>
-
-    <div class="photoAvatar"><img id="myAvatar" src="../images/avatar0.png" alt=""></div>
-    <div id="frase">Olá, Aluno</div>
-
-    <main>
-      <div id="background">
-        <div id="titles" class="abas">
-          <div id="btn-atividades" onclick="alterAba(1)">ATIVIDADES</div>
-          <div id="btn-chat" onclick="alterAba(2)">CHAT</div>
-          <div id="btn-equipe" onclick="alterAba(3)">CONFIGURAÇÕES</div>
-        </div>
-        
-        <!-- ABA ATIVIDADES -->
-
-        <div id="abaAtividades">
-            <div id="timeLine">
-            <div id="title">
-                ATIVIDADES
+    <div id="page-teacher-form" class="container">
+        <header class="page-header primary-color" >
+            <div class="top-bar-container">
+                <a href="../index.html">
+                    <img src="../images/icons/back.svg" alt="Voltar" />
+                </a>
+                <h1>FOCUS</h1>
             </div>
+        </header>
 
-            <div class="background">
+        <div class="photoAvatar"><img id="myAvatar" src="../images/avatar0.png" alt=""></div>
+        <div id="frase">Olá, Aluno</div>
 
-            
-            <div class="buttonCreate">
-                + | CRIAR ATIVIDADE
-            </div>
-
-            <div class="box primary-color">
-                <h3>ATIVIDADES
-                CRIADAS</h3>
+        <main>
+            <div id="background">
+                <div id="titles" class="abas">
+                <div onclick="alterAba(0)">ATIVIDADES</div>
+                <div onclick="alterAba(1)">CHAT</div>
+                <div onclick="alterAba(2)">CONFIGURAÇÕES</div>
+                </div>
                 
-                <div class="backWhite">
-                <div class="itemTarefa secondary-color">
-                    <p><strong>Tarefa dos dados</strong></p>
-                    <p><strong>Data: </strong>09/10/2020</p>
-                    <p><strong>Nota: </strong>9,0</p>
-                </div>
-                </div>
-            </div>
+                <!-- ABA ATIVIDADES -->
 
-            <div class="box primary-color">
-                <h3>ATIVIDADES
-                PENDENTES</h3>
-                <div class="backWhite">
-                <div class="itemTarefa secondary-color">
-                    <p><strong>Tarefa dos dados</strong></p>
-                    <p><strong>Data: </strong>09/10/2020</p>
-                    <p><strong>Nota: </strong>9,0</p>
-                </div>
-                </div>
-            </div>
+                <div id="abaAtividades" class="btn-aba">
+                    <div id="timeLine">
+                        <div id="title">ATIVIDADES</div>
 
-            <div class="box primary-color">
-                <h3>ATIVIDADES
-                CONCLUÍDAS</h3>
+                        <div class="background">
+
+                            <div class="buttonCreate">+ | CRIAR ATIVIDADE</div>
+
+                            <div class="box primary-color">
+                                <h3>ATIVIDADES CRIADAS</h3>
+                                <div class="backWhite">
+                                <div class="itemTarefa secondary-color">
+                                    <p><strong>Tarefa dos dados</strong></p>
+                                    <p><strong>Data: </strong>09/10/2020</p>
+                                    <p><strong>Nota: </strong>9,0</p>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="box primary-color">
+                                <h3>ATIVIDADES PENDENTES</h3>
+                                <div class="backWhite">
+                                <div class="itemTarefa secondary-color">
+                                    <p><strong>Tarefa dos dados</strong></p>
+                                    <p><strong>Data: </strong>09/10/2020</p>
+                                    <p><strong>Nota: </strong>9,0</p>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="box primary-color">
+                                <h3>ATIVIDADES CONCLUÍDAS</h3>
+                                <div class="backWhite">
+                                <div class="itemTarefa secondary-color">
+                                    <p><strong>Tarefa dos dados</strong></p>
+                                    <p><strong>Data: </strong>09/10/2020</p>
+                                    <p><strong>Nota: </strong>9,0</p>
+                                </div>
+
+                                <div class="itemTarefa secondary-color">
+                                    <p><strong>Tarefa dos dados</strong></p>
+                                    <p><strong>Data: </strong>09/10/2020</p>
+                                    <p><strong>Nota: </strong>9,0</p>
+                                </div>
+
+                                <div class="itemTarefa secondary-color">
+                                    <p><strong>Tarefa dos dados</strong></p>
+                                    <p><strong>Data: </strong>09/10/2020</p>
+                                    <p><strong>Nota: </strong>9,0</p>
+                                </div>
+
+                                <div class="itemTarefa secondary-color">
+                                    <p><strong>Tarefa dos dados</strong></p>
+                                    <p><strong>Data: </strong>09/10/2020</p>
+                                    <p><strong>Nota: </strong>9,0</p>
+                                </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!------ ABA CHAT -->
+
+                <div id="abaChat" class="btn-aba">
+                    <div id="timeLine">
+                        <div id="title">CHAT</div>
+                        <div id="line" class="primary-color">
+                            <div id="line_1"></div>
+                            <div id="line_2"></div>
+                        </div>
+
+                        <div id="back-content">
+                            <div id="aside">
+                                <div class="blocks-chat">
+                                    <div class="image">
+                                        <img src="../images/avatar1.png" alt="">
+                                    </div>
+                                    <div class="conversas">
+                                        <strong>Ana Breatriz</strong>
+                                        <p>Ana: Você fez a lição de Português ?</p>
+                                    </div>
+                                    <div class="timer">13:00</div>
+                                </div>
+
+                                <div class="blocks-chat">
+                                    <div class="image">
+                                        <img src="../images/avatar7.png" alt="">
+                                    </div>
+                                    <div class="conversas">
+                                        <strong>João Pedro</strong>
+                                        <p>Você: Oi joao, bom dia. Tudo bem ?</p>
+                                    </div>
+                                    <div class="timer">10:42</div>
+                                </div>
+
+                                <div class="blocks-chat">
+                                    <div class="image">
+                                        <img src="../images/avatar6.png" alt="">
+                                    </div>
+                                    <div class="conversas">
+                                        <strong>Larissa</strong>
+                                        <p>Larissa: Tá bom, eu já te envio...</p>
+                                    </div>
+                                    <div class="timer">10:00</div>
+                                </div>
+
+                                <div class="blocks-chat">
+                                    <div class="image">
+                                        <img src="../images/avatar4.png" alt="">
+                                    </div>
+                                    <div class="conversas">
+                                        <strong>Fernanda</strong>
+                                        <p>Fernanda: Tá bom, acho que até amanhã eu termino a lição.</p>
+                                    </div>
+                                    <div class="timer">09:30</div>
+                                </div>
+
+                                <div class="blocks-chat">
+                                    <div class="image">
+                                        <img src="../images/avatar8.png" alt="">
+                                    </div>
+                                    <div class="conversas">
+                                        <strong>Pedro</strong>
+                                        <p>Você: Oi Pedro, amanha é a prova?</p>
+                                    </div>
+                                    <div class="timer">08:10</div>
+                                </div>
+                            </div>
                 
-                <div class="backWhite">
-                <div class="itemTarefa secondary-color">
-                    <p><strong>Tarefa dos dados</strong></p>
-                    <p><strong>Data: </strong>09/10/2020</p>
-                    <p><strong>Nota: </strong>9,0</p>
-                </div>
+                            <div id="conteudo">
+                                <div class="title">
+                                    <div class="titleImage">
+                                    <img src="../images/avatar1.png" alt="">
+                                    </div>
+                                    <h2>Ana Beatriz</h2>
+                                </div>
 
-                <div class="itemTarefa secondary-color">
-                    <p><strong>Tarefa dos dados</strong></p>
-                    <p><strong>Data: </strong>09/10/2020</p>
-                    <p><strong>Nota: </strong>9,0</p>
-                </div>
+                                <p class="talk">Você fez a lição de Português</p>
 
-                <div class="itemTarefa secondary-color">
-                    <p><strong>Tarefa dos dados</strong></p>
-                    <p><strong>Data: </strong>09/10/2020</p>
-                    <p><strong>Nota: </strong>9,0</p>
-                </div>
-
-                <div class="itemTarefa secondary-color">
-                    <p><strong>Tarefa dos dados</strong></p>
-                    <p><strong>Data: </strong>09/10/2020</p>
-                    <p><strong>Nota: </strong>9,0</p>
-                </div>
-
-                </div>
-            </div>
-            </div>
-
-            </div>
-        </div>
-
-        <!------ ABA CHAT -->
-
-        <div id="abaChat">
-            <div id="timeLine">
-                <div id="title">
-                    CHAT
-                </div>
-
-                <div id="line" class="primary-color">
-                    <div id="line_1"></div>
-                    <div id="line_2"></div>
-                </div>
-
-                <div id="back-content">
-                    <div id="aside">
-                    <div class="blocks-chat">
-                        <a href="#">
-                        <div class="image">
-                            <img src="../images/avatar1.png" alt="">
+                                <div class="toTalk">
+                                    <input class="whiteBar" placeholder="Digite uma mensagem" autofocus></input>
+                                    <div class="buttonEnter"><a href="#"><img src="../images/icons/arrowLeft.svg" alt=""></a></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="conversas">
-                            <strong>Ana Breatriz</strong>
-                            <p>Ana: Você fez a lição de Português ?</p>
-
-                        </div>
-                        <div class="timer">
-                            13:00
-                        </div>
-                        </a>
-                    </div>
-
-                    <div class="blocks-chat">
-                        <a href="#">
-                        <div class="image">
-                            <img src="../images/avatar7.png" alt="">
-                        </div>
-                        <div class="conversas">
-                            <strong>João Pedro</strong>
-                            <p>Você: Oi joao, bom dia. Tudo bem ?</p>
-
-                        </div>
-                        <div class="timer">
-                            10:42
-                        </div>
-                        </a>
-                    </div>
-
-                    <div class="blocks-chat">
-                        <a href="#">
-                        <div class="image">
-                            <img src="../images/avatar6.png" alt="">
-                        </div>
-                        <div class="conversas">
-                            <strong>Larissa</strong>
-                            <p>Larissa: Tá bom, eu já te envio...</p>
-                        </div>
-                        <div class="timer">
-                            10:00
-                        </div>
-                        </a>
-                    </div>
-
-                    <div class="blocks-chat">
-                        <a href="#">
-                        <div class="image">
-                            <img src="../images/avatar4.png" alt="">
-                        </div>
-                        <div class="conversas">
-                            <strong>Fernanda</strong>
-                            <p>Fernanda: Tá bom, acho que até amanhã eu termino a lição.</p>
-                        </div>
-                        <div class="timer">
-                            09:30
-                        </div>
-                        </a>
-                    </div>
-
-                    <div class="blocks-chat">
-                        <a href="#">
-                        <div class="image">
-                            <img src="../images/avatar8.png" alt="">
-                        </div>
-                        <div class="conversas">
-                            <strong>Pedro</strong>
-                            <p>Você: Oi Pedro, amanha é a prova?</p>
-                        </div>
-                        <div class="timer">
-                            08:10
-                        </div>
-                        </a>
-                    </div>
-
-
-                    
-                    </div>
-        
-                    <div id="conteudo">
-                    <div class="title">
-                        <div class="titleImage">
-                        <img src="../images/avatar1.png" alt="">
-                        </div>
-                        <h2>Ana Beatriz</h2>
-                    </div>
-
-                    <p class="talk">
-                        Você fez a lição de Português
-                    </p>
-
-
-                    <div class="toTalk">
-                        <input class="whiteBar" placeholder="Digite uma mensagem" autofocus></input>
-                        <div class="buttonEnter"><a href="#"><img src="../images/icons/arrowLeft.svg" alt=""></a></div>
-                    </div>
                     </div>
                 </div>
 
-                </div>
+                <!-- ABA CONFIGURAÇÕES -->
 
-        </div>
+                <div id="abaConfiguracoes" class="btn-aba">
+                    <div id="timeLine-config">
+                        <div id="title">CONFIGURAÇÕES</div>
 
-
-        <!-- ABA CONFIGURAÇÕES -->
-
-        <div id="abaConfiguracoes">
-            <div id="timeLine-config">
-                <div id="title">
-                  CONFIGURAÇÕES
-                </div>
-
-                <div id="box-form">
-                    <div class="box-config">
-                        <p>Apelido</p>
-                        <div class="inputName">
-                            <input type="text" name="Apelido" id="name">
-                            <div class="buttonSave primary-color" onclick="saveName()" title="Salvar"><img src="../images/icons/saveIcon.png" alt=""></div>
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="box-config">
-                        <p>Tema</p>
-                        <div id="theme">
-                        <div class="theme selected" id="color-puple" onclick="alterTheme('#8257e5',0)"></div>
-                        <div class="theme" id="color-red" onclick="alterTheme('#ff0000',1)"></div>
-                        <div class="theme" id="color-blue" onclick="alterTheme('#0000ff',2)"></div>
-                        <div class="theme" id="color-pink" onclick="alterTheme('#de3be4',3)"></div>
-                        <div class="theme" id="color-orange" onclick="alterTheme('#ffa500',4)"></div>
-                        <div class="theme" id="color-green" onclick="alterTheme('#04bf04',5)"></div>
-                        </div>
-                    </div>
-                
-          
-                    <div class="box-config">
-                        <p>Selecione seu Avatar</p>
-                        <div id="avatar">
-                            <div class="avatar selected" onclick="alterAvatar(0)" ><img src="../images/avatar0.png" alt="avatar modelo 1"></div>
-                            <div class="avatar" onclick="alterAvatar(1)" ><img src="../images/avatar1.png" alt="avatar modelo 9"></div>
-                            <div class="avatar" onclick="alterAvatar(2)" ><img src="../images/avatar2.png" alt="avatar modelo 2"></div>
-
-                            <div class="avatar" onclick="alterAvatar(3)" ><img src="../images/avatar3.png" alt="avatar modelo 3"></div>
-                            <div class="avatar" onclick="alterAvatar(4)" ><img src="../images/avatar4.png" alt="avatar modelo 4"></div>
-                            <div class="avatar" onclick="alterAvatar(5)" ><img src="../images/avatar5.png" alt="avatar modelo 5"></div>
-
-                            <div class="avatar" onclick="alterAvatar(6)" ><img src="../images/avatar6.png" alt="avatar modelo 6"></div>
-                            <div class="avatar" onclick="alterAvatar(7)" ><img src="../images/avatar7.png" alt="avatar modelo 7"></div>
-                            <div class="avatar" onclick="alterAvatar(8)" ><img src="../images/avatar8.png" alt="avatar modelo 8"></div>
+                        <div id="box-form">
+                            <div class="box-config">
+                                <p>Apelido</p>
+                                <div class="inputName">
+                                    <input type="text" name="Apelido" id="name">
+                                    <div class="buttonSave primary-color" onclick="saveName()" title="Salvar"><img src="../images/icons/saveIcon.png" alt=""></div>
+                                </div>
+                            </div>
                             
+                            <div class="box-config">
+                                <p>Tema</p>
+                                <div id="theme">
+                                    <div class="theme selected" id="color-puple" onclick="alterTheme('#8257e5',0)"></div>
+                                    <div class="theme" id="color-red" onclick="alterTheme('#ff0000',1)"></div>
+                                    <div class="theme" id="color-blue" onclick="alterTheme('#0000ff',2)"></div>
+                                    <div class="theme" id="color-pink" onclick="alterTheme('#de3be4',3)"></div>
+                                    <div class="theme" id="color-orange" onclick="alterTheme('#ffa500',4)"></div>
+                                    <div class="theme" id="color-green" onclick="alterTheme('#04bf04',5)"></div>
+                                </div>
+                            </div>
+                        
+                
+                            <div class="box-config">
+                                <p>Selecione seu Avatar</p>
+                                <div id="avatar">
+                                    <div class="avatar selected" onclick="alterAvatar(0)" ><img src="../images/avatar0.png" alt="avatar modelo 1"></div>
+                                    <div class="avatar" onclick="alterAvatar(1)" ><img src="../images/avatar1.png" alt="avatar modelo 9"></div>
+                                    <div class="avatar" onclick="alterAvatar(2)" ><img src="../images/avatar2.png" alt="avatar modelo 2"></div>
+
+                                    <div class="avatar" onclick="alterAvatar(3)" ><img src="../images/avatar3.png" alt="avatar modelo 3"></div>
+                                    <div class="avatar" onclick="alterAvatar(4)" ><img src="../images/avatar4.png" alt="avatar modelo 4"></div>
+                                    <div class="avatar" onclick="alterAvatar(5)" ><img src="../images/avatar5.png" alt="avatar modelo 5"></div>
+
+                                    <div class="avatar" onclick="alterAvatar(6)" ><img src="../images/avatar6.png" alt="avatar modelo 6"></div>
+                                    <div class="avatar" onclick="alterAvatar(7)" ><img src="../images/avatar7.png" alt="avatar modelo 7"></div>
+                                    <div class="avatar" onclick="alterAvatar(8)" ><img src="../images/avatar8.png" alt="avatar modelo 8"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-
-      </div>
-    </main>
-  </div>
-  <script src="../../Model/js/configuration.js"></script>
+        </main>
+    </div>
+    <script src="../../Model/js/configuration.js"></script>
 </body>
 
 </html>
