@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(4, 191, 4, 0.125);
+	background-color: #04bf0420;
 }
 
 div.photoAvatar {
@@ -11,6 +11,7 @@ div.photoAvatar {
   height: 80px;
   border-radius: 50px;
   margin: 0 10px;
+  border: 5px solid white;
 }
 
 div.photoAvatar img {
@@ -21,7 +22,7 @@ div.photoAvatar img {
   background-size: cover;
 }
 
-div.frase {
+div#frase {
   top: 40px;
   left: 320px;
   position: absolute;
@@ -29,127 +30,126 @@ div.frase {
   font-size: 18pt;
   font-weight: bold;
   font-family: Poppins;
-  
 }
 
 div#abaChat {
-    display: none;
+  display: none;
 }
 
 div#abaConfiguracoes {
-    display: none;
+  display: none;
 }
 
 #page-teacher-list {
-    width: 100vw;
-    height: 100vh;
-  }
+  width: 100vw;
+  height: 100vh;
+}
 
 .page-header {
-    display: flex;
-    flex-direction: column;
-    background-color: #04bf04;
+  display: flex;
+  flex-direction: column;
+  background-color: #04bf04
 }
 
 .page-header h1 {
-    color: white;
+  color: white;
 }
 
 .page-header .top-bar-container {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--color-text-in-primary);
-    padding: 1.6rem 0;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-text-in-primary);
+  padding: 1.6rem 0;
 }
 
 .page-header .top-bar-container a {
-    height: 3.2rem;
-    transition: opacity 0.2s;
+  height: 3.2rem;
+  transition: opacity 0.2s;
 }
 
 .page-header .top-bar-container > img {
-    height: 1.6rem;
+  height: 1.6rem;
 }
 
 @media (min-width: 700px) {
-    .page-header {
-    height: 100px;
-    }
+  .page-header {
+	  height: 100px;
+  }
 
-    .page-header .top-bar-container {
-    max-width: 1100px;
-    }
+  .page-header .top-bar-container {
+	  max-width: 1100px;
+  }
 
-    .page-header .header-content {
-    flex: 1;
-    max-width: 740px;
-    margin: 0 auto;
-    padding-bottom: 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    }
+  .page-header .header-content {
+	  flex: 1;
+	  max-width: 740px;
+	  margin: 0 auto;
+	  padding-bottom: 48px;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: flex-start;
+  }
 
-    .page-header .header-content strong {
-    max-width: 350px;
-    }
+  .page-header .header-content strong {
+	  max-width: 350px;
+  }
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
 #page-teacher-form {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 #page-teacher-form .page-header .header-content {
-    margin-bottom: 6.4rem;
+  margin-bottom: 6.4rem;
 }
 
 #page-teacher-form main {
-    background: var(--color-box-base);
-    width: 90%;
-    height: 530px;
-    border-radius: 0.8rem;
-    margin: -3.2rem auto 3.2rem;
-    padding-top: 4rem;
-    overflow: hidden;
+  background: var(--color-box-base);
+  width: 90%;
+  height: 530px;
+  border-radius: 0.8rem;
+  margin: -3.2rem auto 3.2rem;
+  padding-top: 4rem;
+  overflow: hidden;
 }
 
 #page-teacher-form main div#background {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
 }
 
 #page-teacher-form main div#background div#titles {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 #page-teacher-form main div#background div#titles div {
-    display: flex;
-    width: 100%;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    color: black;
-    font: 700 2rem white;
-    padding-top: 5px;
-    border-bottom: 2px solid black;
-    border-radius: 10px 10px 0px 0px;
-    transition: background .2s;
+  display: flex;
+  width: 100%;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+  font: 700 2rem white;
+  padding-top: 5px;
+  border-bottom: 2px solid black;
+  border-radius: 10px 10px 0px 0px;
+  transition: background .2s;
 }
 
 
 #page-teacher-form main div#background div#titles div:hover {
-    background: rgba(128, 128, 128, 0.322);
-    border-bottom: 4px solid black;
+  background: rgba(128, 128, 128, 0.322);
+  border-bottom: 4px solid black;
 }
 
 
@@ -166,90 +166,79 @@ font: 700 3rem white;
 /********************  ABA ATIVIDADES *******************/
 
 div.background{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-
-
 div.background div.buttonCreate {
-    width: 260px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-top: 100px;
-    background-color: var(--color-secundary);
-    color: white;
-    font-size: 14pt;
-    font-weight: bold;
-    cursor: pointer;
+  width: 260px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 100px;
+  background-color: var(--color-secundary);
+  color: white;
+  font-size: 14pt;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 div.background div.buttonCreate:active {
-    background-color: violet;
+  background-color: violet;
 }
 
-
-
 div.background div.box {
-    display: flex;
-    flex-direction: column;
-    width: 260px;
-    min-height: 350px;
-    border-radius: 10px;
-    
-    border: 3px solid black;
-    background-color: rgb(4, 191, 4);
-    
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  min-height: 350px;
+  border-radius: 10px;
+  border: 3px solid black;
+  background-color: #04bf04;
 }
 
 div.background div.box h3 {
-    text-align: center;
-    margin: 5px 0;
-    color: white;
+  text-align: center;
+  margin: 5px 0;
+  color: white;
 }
-
-
 
 div.background div.box div.backWhite{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
-    height: 100%;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  height: 100%;
+  align-items: center;
 }
 
-
 div.background div.box div.backWhite div.itemTarefa {
-    background-color: rgba(4, 191, 4, 0.125);
-    width: 98%;
-    border-radius: 10px;
-    margin-top: 5px;
-    border: 3px solid black;
-    cursor: pointer;
+  background-color: #04bf0420;
+  width: 98%;
+  border-radius: 10px;
+  margin-top: 5px;
+  border: 3px solid black;
+  cursor: pointer;
 
 }
 
 div.background div.box div.backWhite div.itemTarefa p:first-child {
-    text-align: center;
+  text-align: center;
 }
 
 div.background div.box div.backWhite div.itemTarefa p + p {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
+/********************  ABA CHAT *******************/
 
-  /********************  ABA CHAT *******************/
-
-  
 #page-teacher-form main div#background div#timeLine div#line {
   display: flex;
   height: 20px;
-  background-color: rgb(4, 191, 4);
+  background: #04bf04;
 }
 
 #page-teacher-form main div#background div#timeLine div#line div#line_1 {
@@ -273,18 +262,17 @@ div.background div.box div.backWhite div.itemTarefa p + p {
   border: 1px solid black;
 }
 
-div#aside div.blocks-chat a {
+div#aside div.blocks-chat {
   display: flex;
-  width: 100%;
-  height: 100%;
   text-decoration: none;
   padding: 5px 0;
   border: 1px solid black;
   color: gray;
   transition: 0.3s;
+  cursor: pointer;
 }
 
-div#aside div.blocks-chat a:hover {
+div#aside div.blocks-chat:hover {
   color: black;
   background-color: gray;
 }
@@ -317,7 +305,7 @@ div#aside div.blocks-chat div.timer {
 }
 
 div#conteudo {
-  position: relative;
+	position: relative;
 }
 
 div#conteudo div.title {
@@ -388,97 +376,120 @@ div#conteudo div.toTalk div.buttonEnter img {
   height: 100%;
 }
 
-
-
 #page-teacher-form main div#background div#timeLine div#back-content div#conteudo {
   width: 100%;
   border: 1px solid black;
 }
-  
+
 /********************  ABA CONFIGURAÇÕES *******************/
 #page-teacher-form main div#background div#timeLine-config {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
 #page-teacher-form main div#background div#timeLine div#line-config {
-    width: 30%;
-    border-radius: 10px;
-    height: 5px;
-  }
+  width: 30%;
+  border-radius: 10px;
+  height: 5px;
+}
 
 div#box-form {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 0px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0px;
 }
 
 div.box-config {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-between;
-    min-height: 50px;
-    margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  min-height: 50px;
+  margin: 20px 0;
 }
 
 div.box-config p {
-    font-size: 16pt;
+  font-size: 16pt;
 }
 
-hr {
-    width: 100%;
+div.box-config input[type=text] {
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding-left: 10px;
+  color: black;
+}
+
+div.box-config  div.inputName {
+  display: flex;
+}
+
+div.buttonSave {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: #04bf04;
+  border-radius: 5px;
+  padding: 2px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+div.buttonSave img {
+  width: 100%;
+  height: 100%;
 }
 
 div.box-config div#theme {
-    display: flex;
+	display: flex;
 }
 
 
 div.box-config div#theme div.theme {
-    margin: 0 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    border: 3px solid silver;
-    cursor: pointer;
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid silver;
+  cursor: pointer;
 }
 
 #color-puple {
-    background-color: rgb(88, 28, 230);
+  background-color: rgb(88, 28, 230);
 }
 
 #color-pink {
-    background-color: #de3be4;
+  background-color: #de3be4;
 }
 
 #color-red {
-    background-color: red;
+  background-color: red;
 }
 
 #color-blue {
-    background-color: blue;
+  background-color: blue;
 }
 
 #color-orange {
-    background-color: orange;
+  background-color: orange;
 }
 
 #color-green {
-    background-color: #04bf04;
+  background-color: #04bf04;
 }
 
 
 div#avatar {
-    display: flex;
-    margin: 10px 0;
+  display: flex;
+  margin: 10px 0;
 }
+
 
 div.avatar {
   display: flex;
@@ -491,43 +502,24 @@ div.avatar {
 }
 
 div#avatar img {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-size: cover;
-
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: cover;
 }
 
 .selected {
-   border: 3px solid black !important;
-   filter: brightness(80%);
+  border: 3px solid black !important;
+  filter: brightness(80%);
 }
 
-
-div.box-config input[type=text] {
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-  @media (min-width: 700px) {
-    #page-teacher-form {
-      max-width: 100vw;
-    }
-  
-    #page-teacher-form .page-header .header-content {
-      margin-bottom: 0;
-    }
+@media (min-width: 700px) {
+  #page-teacher-form {
+		max-width: 100vw;
   }
+
+  #page-teacher-form .page-header .header-content {
+		margin-bottom: 0;
+  }
+}

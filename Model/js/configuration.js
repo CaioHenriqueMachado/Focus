@@ -35,12 +35,17 @@ var avatar = document.getElementsByClassName("avatar");
 var myAvatar = document.getElementById("myAvatar");
 
 var lastAvatarSelected = 0;
-function alterAvatar(numberAvatar) {
+function alterAvatar(numberAvatar, type) {
     avatar[lastAvatarSelected].classList.remove("selected");
     avatar[numberAvatar].classList.add("selected");
     lastAvatarSelected = numberAvatar;
 
-    myAvatar.src = `../images/avatar${numberAvatar}.png`;
+    if (type == 'aluno'){
+        myAvatar.src = `../images/aluno/avatar${numberAvatar}.png`;
+    }else {
+        myAvatar.src = `../images/professor/avatar${numberAvatar}.png`;
+    }
+    
 }
 
 // Salvar nome

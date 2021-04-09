@@ -419,9 +419,6 @@ div.box-config p {
     font-size: 16pt;
 }
 
-
-
-
 div.box-config input[type=text] {
 	justify-content: center;
 	align-items: center;
@@ -463,7 +460,6 @@ div.box-config div#theme div.theme {
 	border: 3px solid silver;
 	cursor: pointer;
 }
-
 
 #color-puple {
     background-color: rgb(88, 28, 230);
