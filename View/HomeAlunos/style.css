@@ -482,7 +482,7 @@ div.box-config div#theme div.theme {
 }
 
 #color-green {
-    background-color: #04bf04;
+	background-color: #04bf04;
 }
 
 
@@ -523,4 +523,16 @@ div#avatar img {
     #page-teacher-form .page-header .header-content {
       	margin-bottom: 0;
     }
+}
+
+
+
+iframe {
+	position: absolute;
+	display: flex;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
 }

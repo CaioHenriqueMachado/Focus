@@ -1,0 +1,116 @@
+@import "https://fonts.googleapis.com/css?family=Oswald:300,400,700";*
+ {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button,
+textarea {
+  font-family: 400 18px Oswald, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+div.container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin: 1% 10%;
+    z-index: 100;
+    border-radius: 5px;
+}
+
+div.border{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gray;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid white;
+    border-radius: 5px 5px 0 0 ;
+}
+
+div.buttonExit {
+    background-color: rgba(255, 0, 0, 0.787);
+    width: 35px;
+    height: 30px;
+    border: 1px solid white;
+    text-align: center;
+    margin-right: 3px;
+    padding-top: 5px;
+    border-radius: 5px;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: url(../../images/home_page_bg_2.jpg) center center;
+    /* background-repeat: repeat; */
+    background-size: cover;
+    position: relative;
+}
+
+div.opacity {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.5)
+}
+
+div.header {
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+
+div.header h1 {
+    width: 100%;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 50px;
+    font-family: Oswald, Helvetica, sans-serif;
+}
+
+
+div.box {
+    border: 2px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+
+div.mini-box {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    border: 2px solid whitesmoke;
+}
+
+div#sinalIgual {
+    width: 50px;
+    color: whitesmoke;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    font-family: Oswald, Helvetica, sans-serif;
+}
+
+div#resultado {
+    width: 300px;
+}

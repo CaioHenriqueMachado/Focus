@@ -61,7 +61,7 @@
 /* ------------------------------------------------------------------------------------------------------------------------ */
 #page-teacher-form {
   width: 100%;
-  height: 100vh;
+  background-color: #8257e520;
 }
 
 #page-teacher-form .page-header .header-content {
