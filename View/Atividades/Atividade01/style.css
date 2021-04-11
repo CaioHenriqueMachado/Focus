@@ -1,7 +1,11 @@
 @import "https://fonts.googleapis.com/css?family=Oswald:300,400,700";*
- {
+
+{
     margin: 0;
     padding: 0;
+    color: whitesmoke;
+    font-family: Oswald, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 input,
@@ -9,6 +13,8 @@ button,
 textarea {
   font-family: 400 18px Oswald, Helvetica, sans-serif;
 }
+
+
 
 body {
     display: flex;
@@ -21,10 +27,11 @@ div.container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: 1% 10%;
     z-index: 100;
     border-radius: 5px;
+    border: 1px solid white;
 }
 
 div.border{
@@ -53,18 +60,20 @@ div.buttonExit {
 }
 
 main {
-    display: flex;
     width: 100%;
     height: 100%;
-    background: url(../../images/home_page_bg_2.jpg) center center;
-    /* background-repeat: repeat; */
-    background-size: cover;
+    background: url(../../images/home_page_bg_2.jpg);
+    background-repeat: repeat-y;
+    background-size: 100% 100vh;
     position: relative;
+    z-index: -2;
 }
+
 
 div.opacity {
     width: 100%;
     height: 100%;
+    z-index: -1;
     position: absolute;
     background: rgba(0,0,0,0.5)
 }
@@ -72,7 +81,7 @@ div.opacity {
 div.header {
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 30vh;
 }
 
 div.header h1 {
@@ -84,6 +93,51 @@ div.header h1 {
 }
 
 
+div.configuracoes {
+    width: 80%;
+    height: 68vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 5px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16pt;
+}
+
+div.configuracoes input {
+    color: black;
+    width: 200px;
+    height: 30px;
+    font-size: 14pt;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+a#SaveConfigs {
+    background-color: rgb(13, 163, 13);
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+div.question {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+div.question h1.titleQuestion{
+    font-size: 40px;
+    margin: 50px 0;
+}
+
 div.box {
     border: 2px solid whitesmoke;
     display: flex;
@@ -92,6 +146,7 @@ div.box {
     height: 200px;
     border-radius: 10px;
     margin: 0 auto;
+    padding: 0 5px;
 }
 
 
@@ -99,18 +154,75 @@ div.mini-box {
     width: 200px;
     height: 150px;
     display: flex;
-    border: 2px solid whitesmoke;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border:  1px dashed whitesmoke;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+div.mini-box img{
+    width: 100px;
+    height: 100%;
+}
+
+div#operador {
+    width: 100px;
 }
 
 div#sinalIgual {
-    width: 50px;
-    color: whitesmoke;
-    justify-content: center;
-    text-align: center;
+    width: 100px;
     font-size: 50px;
-    font-family: Oswald, Helvetica, sans-serif;
+    cursor:default;
+}
+
+div#sinalIgual img {
+    width: 100%;
 }
 
 div#resultado {
     width: 300px;
+}
+
+div#check {
+    width: 100px;
+    cursor:default;
+    border: none;
+}
+
+div#check img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    filter: brightness(20%);
+    cursor: pointer;
+}
+
+div#check img:active{
+    filter: brightness(100%);
+}
+
+div.window {
+    width: 79%;
+    height: 120px;
+    display: flex;
+    bottom: 0;
+    position: fixed;
+    background-color: whitesmoke;
+    border: 5px solid black;
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+
+}
+
+div.images {
+    width: 74px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+div.images img {
+    width: 100%;
+    height: 100%;
 }

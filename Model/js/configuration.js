@@ -56,3 +56,23 @@ function saveName() {
     var name = document.getElementById("name");
     frase.innerText = `Olá, ${name.value}!`;
 }
+
+
+
+// Ativar Frame
+
+var frame = document.getElementById("frame");
+
+function createdAtv() {
+    frame.style.display = "block";
+}
+
+
+
+//Exit
+
+function test (){
+    var frame = document.getElementById("frame");
+    console.log(frame)
+    frame.style.display = "none";
+}
