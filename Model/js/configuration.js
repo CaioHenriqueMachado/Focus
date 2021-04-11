@@ -61,18 +61,12 @@ function saveName() {
 
 // Ativar Frame
 
-var frame = document.getElementById("frame");
+var divBackgroundGray = document.getElementById("backgroundGray");
 
-function createdAtv() {
-    frame.style.display = "block";
+function openTask() {
+    divBackgroundGray.style.display = "block";
 }
 
-
-
-//Exit
-
-function test (){
-    var frame = document.getElementById("frame");
-    console.log(frame)
-    frame.style.display = "none";
+function closeTask() {
+    divBackgroundGray.style.display = "none";
 }
