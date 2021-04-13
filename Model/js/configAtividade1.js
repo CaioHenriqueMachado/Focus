@@ -1,0 +1,9 @@
+
+function operador() {
+    
+}
+
+
+function selectedOperador() {
+
+}
