@@ -20,14 +20,14 @@
         <h2>Configurações</h2>
 
         Nome da Tarefa
-        <input type="text" name="" id="" required>
+        <input type="text" name="Nome da Tarefa" id="">
         <br>
         Data de abertura
-        <input type="date" name="" id="" required>
+        <input type="date" name="Data de abertura" id="">
         <br>
         Data de finalização
-        <input type="date" name="" id="">
-        <a id="SaveConfigs" onclick="t()">Salvar</a>
+        <input type="date" name="Data de finalização" id="">
+        <a id="SaveConfigs" onclick="validationConfig()">Salvar</a>
     </div>
 
 
@@ -59,7 +59,7 @@
             </div>
 
             <div class="mini-box" id="check">
-                <a href="#Question2"><img src="../../images/icons/check.png" alt=""></a>
+                <a onclick="validationQuestion(1)"><img src="../../images/icons/check.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -92,7 +92,7 @@
             </div>
 
             <div class="mini-box" id="check">
-                <a href="#Question2"><img src="../../images/icons/check.png" alt=""></a>
+                <a onclick="validationQuestion(2)"><img src="../../images/icons/check.png" alt=""></a>
             </div>
         </div>
     </div>

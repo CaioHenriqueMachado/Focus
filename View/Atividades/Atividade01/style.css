@@ -154,9 +154,10 @@ div#check img {
     border-radius: 50%;
     filter: brightness(20%);
     cursor: pointer;
+    transition: 0.2s;
 }
 
-div#check img:active{
+div#check img:hover{
     filter: brightness(100%);
 }
 
@@ -164,7 +165,6 @@ div.window {
     width: 79%;
     height: 120px;
     display: flex;
-
     bottom: 0;
     margin: 0 10%;
     position: fixed;

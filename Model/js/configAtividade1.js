@@ -113,7 +113,57 @@ function limitNumberBox(question, box, number, limit) {
 
 
 
-function t() {
-    window.location.href = "#Question1"
-    // alert("teste");
+
+
+function validationConfig() {
+    var inputs = document.getElementsByTagName("input");
+    var campoVazio = false;
+    var indexVazio = 0;
+
+    for (var i = 0; i <= 2; i++){
+        if(inputs[i].value.length == 0) {
+            campoVazio = true;
+            indexVazio = i;
+            break;
+        }
+    }
+
+    if (campoVazio) {
+        alert(`O campo ${inputs[indexVazio].name} deve ser preenchido !`);
+    }else {
+        window.location.href = "#Question1"
+    }
+    
+}
+
+
+function validationQuestion(question) {
+    var campoVazio = false;
+    var indexVazio = 0;
+
+    for (var i=1; i <= 4; i++) {
+        if (atividade.questao[question][i].length == 0){
+            campoVazio = true;
+            indexVazio = i;
+            break;
+        }
+    }
+
+    if (campoVazio) {
+        if (indexVazio == 2){
+            alert(`Um operador deve ser escolhido na questão ${question} !`);
+        }else if(indexVazio == 4) {
+            alert(`Um Resultado deve ser escolhido na questão ${question} !`);
+        }else {
+            alert(`Um Número deve ser escolhido na questão ${question} !`);
+        }
+
+    }else {
+        if (question != 10){
+            window.location.href = `#Question${question + 1}`;
+        }
+        
+    }
+
+    
 }
