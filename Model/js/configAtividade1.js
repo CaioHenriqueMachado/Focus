@@ -4,73 +4,116 @@ var box3 = document.getElementsByClassName("box3");
 var resultado = document.getElementsByClassName("resultado");
 
 
-var indexNumber;
+var atividade = {
+    id: 1,
+    descricao: "",
+    questao: {
+        1: {1: "",2: "",3: "",4: ""},
+        2: {1: "",2: "",3: "",4: ""},
+        3: {1: "",2: "",3: "",4: ""},
+        4: {1: "",2: "",3: "",4: ""},
+        5: {1: "",2: "",3: "",4: ""},
+        6: {1: "",2: "",3: "",4: ""},
+        7: {1: "",2: "",3: "",4: ""},
+        8: {1: "",2: "",3: "",4: ""},
+        9: {1: "",2: "",3: "",4: ""},
+        10: {1: "",2: "",3: "",4: ""},
+    }
+}
+
+
+
+// console.log(atividade.questao[1][1]);
+
+// for (var index in atividade.questao[1][1]) {
+
+//     console.log(atividade.questao[1][1].substr(index,1));
+// }
+
+// console.log(atividade.questoes[0][0].substr(2,1));
+
+// atividade.questoes[0] = ["1"]
+// atividade.questao[1][0] = "1";
+
+// console.log(atividade.questao[1][1]);
+
+var indexQuestion;
 var indexBox;
 var clique = false;
-function inputBox(id, numberBox) {
-    indexNumber = id - 1;
+function inputBox(question, numberBox) {
+    indexQuestion = question;
     indexBox = numberBox;
     clique = true
 }
 
 
 function selectedFigure(id) {
-    if (clique){
+    if (clique) {
         if (indexBox == 1) {
-            if (id < 10){
-                box1[indexNumber].innerText = '';
-                console.log(limitNumberBox(box1, indexNumber, 2));
-                if ( limitNumberBox(box1, indexNumber, 2)){
-                    box1[indexNumber].innerHTML = `<img src="../../images/numbers/monsters/${id}.png" alt="">`;
-                    console.log('teste1');
-                }else {
-                    box1[indexNumber].innerHTML += `<img src="../../images/numbers/monsters/${id}.png" alt="">`;
-                    console.log('teste2');
+            if (id < 10) {
+                box1[indexQuestion - 1].innerText = '';
+                limitNumberBox(indexQuestion, indexBox, id, 2);
+
+                for (var index in atividade.questao[indexQuestion][indexBox]) {
+                    var id = atividade.questao[indexQuestion][indexBox].substr(index,1)
+                    box1[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/monsters/${id}.png" alt="">`;
                 }
+                // console.log(atividade.questao[indexQuestion]);
             }
         }
 
         if (indexBox == 2) {
             if (id > 10) {
-                operadores[indexNumber].innerText = '';
-                operadores[indexNumber].innerHTML = `<img src="../../images/numbers/operadores/${id}.png" alt="">`;
+                operadores[indexQuestion - 1].innerText = '';
+                limitNumberBox(indexQuestion, indexBox, id, 2);
+
+                operadores[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/operadores/${id}.png" alt="">`;
+
+                // console.log(atividade.questao[indexQuestion]);
             }
         }
 
         if (indexBox == 3) {
-            if (id < 10){
-                box3[indexNumber].innerText = '';
-                var valid = limitNumberBox(box3, indexNumber, 2)
-                if ( valid){
-                    box3[indexNumber].innerHTML = `<img src="../../images/numbers/monsters/${id}.png" alt="">`;
-                }else {
-                    box3[indexNumber].innerHTML += `<img src="../../images/numbers/monsters/${id}.png" alt="">`;
+            if (id < 10) {
+                box3[indexQuestion - 1].innerText = '';
+                limitNumberBox(indexQuestion, indexBox, id, 2);
+
+                for (var index in atividade.questao[indexQuestion][indexBox]) {
+                    var id = atividade.questao[indexQuestion][indexBox].substr(index,1)
+                    box3[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/monsters/${id}.png" alt="">`;
                 }
+                // console.log(atividade.questao[indexQuestion]);
             }
         }
 
         if (indexBox == 4) {
             if (id < 10) {
-                resultado[indexNumber].innerText = '';
-                resultado[indexNumber].innerHTML = `<img src="../../images/numbers/monsters/${id}.png" alt="">`;
+                resultado[indexQuestion - 1].innerText = '';
+                limitNumberBox(indexQuestion, indexBox, id, 3);
+
+                for (var index in atividade.questao[indexQuestion][indexBox]) {
+                    var id = atividade.questao[indexQuestion][indexBox].substr(index,1)
+                    resultado[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/monsters/${id}.png" alt="">`;
+                }
+                // console.log(atividade.questao[indexQuestion]);
             }
         }
     }
 }
 
 
-
-var boxa = document.getElementById("boxa");
-
-
-function limitNumberBox(box,indexNumber, limit) {
-    console.log(box[indexNumber]);
-    var qtd = box[indexNumber].querySelectorAll('img').length;
-    console.log(qtd)
-    if ( qtd == 0 || qtd == limit){
-        return true;
+function limitNumberBox(question, box, number, limit) {
+    var quantidade = atividade.questao[question][box].length
+    if ( quantidade == 0 || quantidade == limit ){
+        atividade.questao[question][box] = String(number);
+    }else{
+        atividade.questao[question][box] += String(number);
     }
-    else {
-        return false;
-    }
+}
+
+
+
+function t() {
+    window.location.href = "#Question1"
+    // alert("teste");
 }
