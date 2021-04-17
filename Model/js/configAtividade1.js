@@ -149,7 +149,7 @@ function validationQuestion(question) {
     }
 }
 
-var theme = "monsters";
+var theme = "classico";
 
 
 function selectTheme(type) {
@@ -158,4 +158,6 @@ function selectTheme(type) {
     for(var i = 0; i <= 9; i++){
         images[i].src = `../../images/numbers/${type}/${i}.png`;
     }
+
+    theme = type;
 }

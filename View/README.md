@@ -29,18 +29,22 @@ IMPORTAR LISTA DE ALUNOS
 
 
 
-ATIVIDADE
-Aqui é o feed de noticias, vai mostrar se tem atividades novas para fazer, reunião, etc... (Para determinados eventos)
+
+SPRINT TO 17/04
+
+CHECK
+
+- ESCOLHER IMAGENS DOS NÚMEROS
+- ESCOLHER IMAGENS DE FUNDO
 
 
-EQUIPE
-Aqui tem as matérias e grupos separado por matéria. Os alunos só conversam com as pessoas da mesma sala.
+
+PENDENTES
+
+ - CRIAR ALERT "TEM CERTEZA QUE QUER CONCLUIR"
 
 
-TRABALHO
-Aqui é onde mostra os trabalhos que tem para fazer.
+- INSERIR TEMA NO OBJETO
 
-
-CHAT
-Chat é onde você consegue conversar com todos alunos.
-
+ - CRIAR ATIVIDADE SÓ PARA INSERIR RESULTADOS
+ - EXIBIR NOTAS
