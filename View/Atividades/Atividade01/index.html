@@ -11,24 +11,27 @@
 <body>
     <div class="opacity"></div>
 
-    <div class="header">
-        <h1>Atividade das Operações</h1>
+
+    <div class="block">
+        <div class="header">
+            <h1>Atividade das Operações</h1>
+        </div>
+        <div class="themes">
+            <h2>Escolha qual tema será aplicado nessa atividade</h2>
+
+            <div class="tipos">
+                <div onclick="selectTheme('monsters')">monsters</div>
+                <div onclick="selectTheme('anges')">anjinhos</div>
+                <div onclick="selectTheme(3)">crianças</div>
+                <div onclick="selectTheme(4)">animais</div>
+                <div onclick="selectTheme(5)">monsters</div>
+                <div onclick="selectTheme(6)">anjinhos</div>
+            </div>
+
+            <a href="#Question1">Avançar</a>
+        </div>
     </div>
 
-
-    <div class="configuracoes" id="configuracoes">
-        <h2>Configurações</h2>
-
-        Nome da Tarefa
-        <input type="text" name="Nome da Tarefa" id="">
-        <br>
-        Data de abertura
-        <input type="date" name="Data de abertura" id="">
-        <br>
-        Data de finalização
-        <input type="date" name="Data de finalização" id="">
-        <a id="SaveConfigs" onclick="validationConfig()">Salvar</a>
-    </div>
 
 
 
@@ -358,48 +361,71 @@
         </div>
     </div>
 
+
+    <!-- CONFIGURAÇÕES FINAIS -->
+    <div class="block">
+        <div class="header">
+            <h1>Atividade das Operações</h1>
+        </div>
+
+        <div class="configuracoes" id="configuracoes">
+            <h2>Configurações</h2>
+    
+            Nome da Tarefa
+            <input type="text" name="Nome da Tarefa" id="">
+            <br>
+            Data de abertura
+            <input type="date" name="Data de abertura" id="">
+            <br>
+            Data de finalização
+            <input type="date" name="Data de finalização" id="">
+            <a id="SaveConfigs" onclick="validationConfig()">Salvar</a>
+        </div>
+    </div>
+
+
     <div class="window">
+        <div class="images" onclick="selectedFigure(0)">
+            <img class="imageTheme" src="../../images/numbers/monsters/0.png" alt="">
+        </div>
         <div class="images" onclick="selectedFigure(1)">
-            <img src="../../images/numbers/monsters/1.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/monsters/1.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(2)">
-            <img src="../../images/numbers/monsters/2.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/monsters/2.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(3)">
-            <img src="../../images/numbers/monsters/3.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/monsters/3.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(4)">
-            <img src="../../images/numbers/monsters/4.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/monsters/4.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(5)">
-            <img src="../../images/numbers/monsters/5.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/monsters/5.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(6)">
-            <img src="../../images/numbers/monsters/6.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/monsters/6.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(7)">
-            <img src="../../images/numbers/monsters/7.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/monsters/7.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(8)">
-            <img src="../../images/numbers/monsters/8.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/monsters/8.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(9)">
-            <img src="../../images/numbers/monsters/9.png" alt="">
-        </div>
-        <div class="images" onclick="selectedFigure(0)">
-            <img src="../../images/numbers/monsters/0.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/monsters/9.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(11)">
-            <img src="../../images/numbers/operadores/11.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/operadores/11.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(12)">
-            <img src="../../images/numbers/operadores/12.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/operadores/12.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(13)">
-            <img src="../../images/numbers/operadores/13.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/operadores/13.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(14)">
-            <img src="../../images/numbers/operadores/14.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/operadores/14.png" alt="">
         </div>
     </div>
 

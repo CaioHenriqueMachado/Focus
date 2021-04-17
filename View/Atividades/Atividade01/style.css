@@ -6,6 +6,7 @@
     color: whitesmoke;
     font-family: Oswald, Helvetica, sans-serif;
     scroll-behavior: smooth;
+    overflow-y: hidden;
 }
 
 input,
@@ -34,10 +35,62 @@ div.opacity {
     z-index: -1;
 }
 
+div.block {
+    width: 100%;
+    height: 100vh;
+}
+
+div.themes {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.themes h2 {
+    margin-bottom: 30px;
+}
+
+div.themes a {
+    background-color: rgb(13, 163, 13);
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+div.tipos {
+    display: flex;
+}
+
+div.tipos div {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 15px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.selectedTipo {
+    border: 2px solid black;
+}
+
+div.tipos div img {
+    width: 100%;
+    height: 100%;
+}
+
 div.header {
     display: flex;
     width: 100%;
-    height: 30vh;
+    height: 30%;
 }
 
 div.header h1 {
@@ -51,7 +104,7 @@ div.header h1 {
 
 div.configuracoes {
     width: 80%;
-    height: 68vh;
+    height: 68%;
     margin: 0 auto;
     border-radius: 10px;
     border: 5px solid white;
