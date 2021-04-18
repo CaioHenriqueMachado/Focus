@@ -61,12 +61,23 @@ function saveName() {
 
 // Ativar Frame
 
-var divBackgroundGray = document.getElementById("backgroundGray");
+var divBackgroundGray = document.getElementById("x");
 
 function openTask() {
-    divBackgroundGray.style.display = "block";
+    divBackgroundGray.innerHTML = 
+    `<div id="backgroundGray">
+        <div class="container-iframe">
+            <div class="border">
+                <h2>Focus</h2>
+                <div class="buttonExit" onclick="closeTask()">X</div>
+            </div>
+            <iframe id="frame" src="../Atividades/Atividade01/index.html" frameborder="0"></iframe>
+        </div>
+    </div>`
 }
 
 function closeTask() {
-    divBackgroundGray.style.display = "none";
+    if (confirm("Se fechar alterações feitas não sejam salvas.")){
+        divBackgroundGray.innerHTML = '';
+    }
 }

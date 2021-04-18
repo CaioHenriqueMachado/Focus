@@ -7,6 +7,9 @@ var resultado = document.getElementsByClassName("resultado");
 var atividade = {
     id: 1,
     descricao: "",
+    tema: "padrao",
+    data_inicio:"",
+    data_fim:"",
     questao: {
         1: { 1: "", 2: "", 3: "", 4: "" },
         2: { 1: "", 2: "", 3: "", 4: "" },
@@ -37,6 +40,7 @@ function selectedFigure(id) {
         if (indexBox == 1) {
             if (id < 10) {
                 box1[indexQuestion - 1].innerText = '';
+                box1[indexQuestion - 1].style.border = "none";
                 limitNumberBox(indexQuestion, indexBox, id, 2);
 
                 for (var index in atividade.questao[indexQuestion][indexBox]) {
@@ -50,6 +54,7 @@ function selectedFigure(id) {
         if (indexBox == 2) {
             if (id > 10) {
                 operadores[indexQuestion - 1].innerText = '';
+                operadores[indexQuestion - 1].style.border = "none";
                 limitNumberBox(indexQuestion, indexBox, id, 2);
 
                 operadores[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/operadores/${id}.png" alt="">`;
@@ -61,6 +66,7 @@ function selectedFigure(id) {
         if (indexBox == 3) {
             if (id < 10) {
                 box3[indexQuestion - 1].innerText = '';
+                box3[indexQuestion - 1].style.border = "none";
                 limitNumberBox(indexQuestion, indexBox, id, 2);
 
                 for (var index in atividade.questao[indexQuestion][indexBox]) {
@@ -74,6 +80,7 @@ function selectedFigure(id) {
         if (indexBox == 4) {
             if (id < 10) {
                 resultado[indexQuestion - 1].innerText = '';
+                resultado[indexQuestion - 1].style.border = "none";
                 limitNumberBox(indexQuestion, indexBox, id, 3);
 
                 for (var index in atividade.questao[indexQuestion][indexBox]) {
@@ -106,15 +113,23 @@ function validationConfig() {
             campoVazio = true;
             indexVazio = i;
             break;
+        }else {
+            if (i == 0){
+                atividade.descricao = inputs[i].value;
+            }else if (i == 1){
+                atividade.data_inicio = inputs[i].value;
+            }else if (i == 2){
+                atividade.data_fim = inputs[i].value;
+            }
         }
     }
 
     if (campoVazio) {
         alert(`O campo ${inputs[indexVazio].name} deve ser preenchido !`);
     } else {
-        alert(`Você finalizou essa atividade!`);
-        window.location.href = `https://www.uol.com.br`; 
-
+        alert(`Você finalizou essa atividade! Pode procurar outra.`);
+        limpaDados();
+        window.location.href = `#inicio`; 
     }
 
 }
@@ -168,10 +183,11 @@ function exibeAba(exibir) {
 
 
 
-var theme = "classico";
+var theme = "padrao";
 
 var selectedTheme = 0;
 function selectTheme(type, id) {
+    atividade.tema = type;
     var imgBackground = document.getElementsByTagName("body");
     var boxImages = document.getElementsByClassName("boxImages");
     var images = document.getElementsByClassName("imageTheme");
@@ -195,8 +211,46 @@ function selectTheme(type, id) {
 function backQuestion(id) {
     if (id == 1) {
         window.location = "#inicio";
+        limpaDados();
     }else {
         window.location = `#Question${id - 1}`;
         exibeAba(true);
     }
+}
+
+
+
+
+function gravarDados(){
+    console.log("função para gravar dados")
+}
+
+
+function limpaDados(){
+    var inputs = document.getElementsByTagName("input");
+
+    selectTheme("padrao", 0);
+    for (i = 0; i <= 2; i++) {
+        inputs[i].value = '';
+        atividade.descricao = '';
+        atividade.data_inicio = '';
+        atividade.data_fim = '';
+    }
+
+    for (var i = 0; i <=9; i++){
+        box1[i].innerHTML = '';
+        box1[i].innerText = 'Clique aqui e escolha um número';
+        box3[i].innerHTML = '';
+        box3[i].innerText = 'Clique aqui e escolha um número';
+        operadores[i].innerHTML = '';
+        operadores[i].innerText = 'Clique aqui e escolha um operador';
+        resultado[i].innerHTML = '';
+        resultado[i].innerText = 'Clique aqui e escolha o Resultado';
+        atividade.questao[i + 1][1] = '';
+        atividade.questao[i + 1][2] = '';
+        atividade.questao[i + 1][3] = '';
+        atividade.questao[i + 1][4] = '';
+    }
+    console.log("OBJETO LIMPO:");
+    console.log(atividade);
 }

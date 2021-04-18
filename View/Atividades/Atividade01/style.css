@@ -6,7 +6,7 @@
     color: whitesmoke;
     font-family: Oswald, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 
 input,
@@ -203,6 +203,7 @@ div#sinalIgual {
     width: 100px;
     font-size: 50px;
     cursor:default;
+    border:  none;
 }
 
 div#sinalIgual img {
