@@ -1,153 +1,126 @@
-var box1 = document.getElementsByClassName("box1");
-var operadores = document.getElementsByClassName("operador");
-var box3 = document.getElementsByClassName("box3");
-var resultado = document.getElementsByClassName("resultado");
+var imagesQuestion = document.getElementsByClassName("mini-box-images");
+var resultado = document.getElementsByClassName("mini-box-resultado");
+var box = document.getElementsByClassName("box"); 
+
 
 var atividade = {
     id: 1,
-    descricao: "",
-    tema: "padrao",
+    descricao: "Super Atividade do caio",
+    tema: "monsters",
     data_inicio: "",
     data_fim: "",
     questao: {
-        1: { 1: "", 2: "", 3: "", 4: "" },
-        2: { 1: "", 2: "", 3: "", 4: "" },
-        3: { 1: "", 2: "", 3: "", 4: "" },
-        4: { 1: "", 2: "", 3: "", 4: "" },
-        5: { 1: "", 2: "", 3: "", 4: "" },
-        6: { 1: "", 2: "", 3: "", 4: "" },
-        7: { 1: "", 2: "", 3: "", 4: "" },
-        8: { 1: "", 2: "", 3: "", 4: "" },
-        9: { 1: "", 2: "", 3: "", 4: "" },
-        10: { 1: "", 2: "", 3: "", 4: "" },
+        1: { 1: "89", 2: "11", 3: "1", 4: "12" },
+        2: { 1: "12", 2: "12", 3: "12", 4: "54" },
+        3: { 1: "43", 2: "13", 3: "20", 4: "345" },
+        4: { 1: "41", 2: "14", 3: "4", 4: "089" },
+        5: { 1: "2", 2: "11", 3: "0", 4: "1" },
+        6: { 1: "01", 2: "11", 3: "1", 4: "12" },
+        7: { 1: "12", 2: "12", 3: "12", 4: "54" },
+        8: { 1: "43", 2: "13", 3: "20", 4: "345" },
+        9: { 1: "41", 2: "14", 3: "4", 4: "089" },
+        10: { 1: "2", 2: "11", 3: "0", 4: "1" },
+    }
+}
+
+var respostas = {
+    id: 1,
+    atividade: "atlfsd",
+    aluno: "caio",
+    ra: 2131148,
+    respostas: {
+        1: "",
+        2: "",
+        3: "",
+        4: "",
+        5: "",
+        6: "",
+        7: "",
+        8: "",
+        9: "",
+        10: ""
     }
 }
 
 
+var theme = atividade.tema;
+var imgBackground = document.getElementsByTagName("body");
+var images = document.getElementsByClassName("imageTheme");
+
+imgBackground[0].style.background = `url(../../images/numbers/${theme}/background.jpg)`;
+imgBackground[0].style.backgroundRepeat = "repeat-y";
+imgBackground[0].style.backgroundSize = "100% 100vh";
+
+for (var i = 0; i <= 9; i++) {
+    images[i].src = `../../images/numbers/${theme}/${i}.png`;
+}
+
+for (var i = 0; i <= 9; i++) {
+    // REFERENTE A BOX 1
+    var qtd = atividade.questao[i + 1][1].length;
+    for (var j = 0; j < qtd; j++) {
+        var id = atividade.questao[i + 1][1].substr(j, 1)
+        imagesQuestion[i].innerHTML += `<img src="../../images/numbers/${theme}/${id}.png" alt="">`;
+    }
+
+    // REFERENTE A OPERADORES
+    var id = atividade.questao[i + 1][2]
+    imagesQuestion[i].innerHTML += `<img src="../../images/numbers/operadores/${id}.png" alt="">`;
+
+
+    // REFERENTE A BOX 3
+
+    var qtd = atividade.questao[i + 1][3].length;
+    for (var j = 0; j < qtd; j++) {
+        var id = atividade.questao[i + 1][3].substr(j, 1)
+        imagesQuestion[i].innerHTML += `<img src="../../images/numbers/${theme}/${id}.png" alt="">`;
+    }
+
+    // REFERENTE A SINAL DE IGUAL
+    imagesQuestion[i].innerHTML += `<img src="../../images/numbers/operadores/igual.png" alt="">`;
+
+}
+
 var indexQuestion;
-var indexBox;
 var clique = false;
-function inputBox(question, numberBox) {
+function inputBox(question) {
     indexQuestion = question;
-    indexBox = numberBox;
     clique = true
 }
 
 function selectedFigure(id) {
-    if (clique) {
-        if (indexBox == 1) {
-            if (id < 10) {
-                box1[indexQuestion - 1].innerText = '';
-                box1[indexQuestion - 1].style.border = "none";
-                limitNumberBox(indexQuestion, indexBox, id, 2);
+    resultado[indexQuestion - 1].innerText = '';
+    resultado[indexQuestion - 1].style.border = "none";
+    limitNumberBox(indexQuestion, id, 3);
 
-                for (var index in atividade.questao[indexQuestion][indexBox]) {
-                    var id = atividade.questao[indexQuestion][indexBox].substr(index, 1)
-                    box1[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/${theme}/${id}.png" alt="">`;
-                }
-            }
-        }
-
-        if (indexBox == 2) {
-            if (id > 10) {
-                operadores[indexQuestion - 1].innerText = '';
-                operadores[indexQuestion - 1].style.border = "none";
-                limitNumberBox(indexQuestion, indexBox, id, 2);
-
-                operadores[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/operadores/${id}.png" alt="">`;
-            }
-        }
-
-        if (indexBox == 3) {
-            if (id < 10) {
-                box3[indexQuestion - 1].innerText = '';
-                box3[indexQuestion - 1].style.border = "none";
-                limitNumberBox(indexQuestion, indexBox, id, 2);
-
-                for (var index in atividade.questao[indexQuestion][indexBox]) {
-                    var id = atividade.questao[indexQuestion][indexBox].substr(index, 1)
-                    box3[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/${theme}/${id}.png" alt="">`;
-                }
-            }
-        }
-
-        if (indexBox == 4) {
-            if (id < 10) {
-                resultado[indexQuestion - 1].innerText = '';
-                resultado[indexQuestion - 1].style.border = "none";
-                limitNumberBox(indexQuestion, indexBox, id, 3);
-
-                for (var index in atividade.questao[indexQuestion][indexBox]) {
-                    var id = atividade.questao[indexQuestion][indexBox].substr(index, 1)
-                    resultado[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/${theme}/${id}.png" alt="">`;
-                }
-                // console.log(atividade.questao[indexQuestion]);
-            }
-        }
+    for (var index in respostas.respostas[indexQuestion]) {
+        var id = respostas.respostas[indexQuestion].substr(index, 1)
+        resultado[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/${theme}/${id}.png" alt="">`;
     }
 }
 
-
-function limitNumberBox(question, box, number, limit) {
-    var quantidade = atividade.questao[question][box].length
+function limitNumberBox(question, number, limit) {
+    var quantidade = respostas.respostas[question].length;
     if (quantidade == 0 || quantidade == limit) {
-        atividade.questao[question][box] = String(number);
+        respostas.respostas[question] = String(number);
     } else {
-        atividade.questao[question][box] += String(number);
+        respostas.respostas[question] += String(number);
     }
 }
 
-function validationConfig() {
-    var inputs = document.getElementsByTagName("input");
-    var campoVazio = false;
-    var indexVazio = 0;
-
-    for (var i = 0; i <= 2; i++) {
-        if (inputs[i].value.length == 0) {
-            campoVazio = true;
-            indexVazio = i;
-            break;
-        } else {
-            if (i == 0) {
-                atividade.descricao = inputs[i].value;
-            } else if (i == 1) {
-                atividade.data_inicio = inputs[i].value;
-            } else if (i == 2) {
-                atividade.data_fim = inputs[i].value;
-            }
-        }
-    }
-
-    if (campoVazio) {
-        alert(`O campo ${inputs[indexVazio].name} deve ser preenchido !`);
-    } else {
-        alert(`Você finalizou essa atividade! Pode procurar outra.`);
-        gravarDados();
-        limpaDados();
-        window.location.href = `#inicio`;
-    }
-}
 
 function validationQuestion(question) {
     var campoVazio = false;
     var indexVazio = 0;
 
-    for (var i = 1; i <= 4; i++) {
-        if (atividade.questao[question][i].length == 0) {
-            campoVazio = true;
-            indexVazio = i;
-            break;
-        }
+
+    if (respostas.respostas[question].length == 0) {
+        campoVazio = true;
     }
 
+
     if (campoVazio) {
-        if (indexVazio == 2) {
-            alert(`Um operador deve ser escolhido na questão ${question} !`);
-        } else if (indexVazio == 4) {
-            alert(`Um Resultado deve ser escolhido na questão ${question} !`);
-        } else {
-            alert(`Um Número deve ser escolhido na questão ${question} !`);
-        }
+        alert(`Um Resultado deve ser escolhido na questão ${question} !`);
 
     } else {
         if (question != 10) {
@@ -159,6 +132,14 @@ function validationQuestion(question) {
     }
 }
 
+function backQuestion(id) {
+    if (id == 1) {
+        window.location = "#inicio";
+    } else {
+        window.location = `#Question${id - 1}`;
+        exibeAba(true);
+    }
+}
 
 var windowNumbers = document.getElementById("window");
 
@@ -172,69 +153,42 @@ function exibeAba(exibir) {
     }
 }
 
-
-var theme = "padrao";
-
-var selectedTheme = 0;
-function selectTheme(type, id) {
-    atividade.tema = type;
-    var imgBackground = document.getElementsByTagName("body");
-    var boxImages = document.getElementsByClassName("boxImages");
-    var images = document.getElementsByClassName("imageTheme");
-
-    boxImages[selectedTheme].classList.remove("selectedTipo");
-    boxImages[id].classList.add("selectedTipo");
-    selectedTheme = id;
-
-    imgBackground[0].style.transition = "1s"
-    imgBackground[0].style.background = `url(../../images/numbers/${type}/background.jpg)`;
-    imgBackground[0].style.backgroundRepeat = "repeat-y";
-    imgBackground[0].style.backgroundSize = "100% 100vh";
-
-    for (var i = 0; i <= 9; i++) {
-        images[i].style.transition = "3s"
-        images[i].src = `../../images/numbers/${type}/${i}.png`;
+function validationConfig() {
+    if (confirm(`Você irá concluir atividade!`)){
+        var notaFinal = compararDados();
+        gravarDados();
+        alert(`Sua nota foi: ${notaFinal},00!`);
+        window.location.href = `#inicio`;
     }
-    theme = type;
 }
 
-function backQuestion(id) {
-    if (id == 1) {
-        window.location = "#inicio";
-        limpaDados();
-    } else {
-        window.location = `#Question${id - 1}`;
-        exibeAba(true);
+function compararDados() {
+    var nota = 0;
+    for(var i = 1; i <= 10; i++) {
+        var gabarito = atividade.questao[i][4];
+        var resposta = respostas.respostas[i];
+        if (gabarito == resposta){
+            box[i - 1].style.border = "2px solid rgb(0, 250, 12)";
+            nota += 1;
+        }else {
+            box[i - 1].style.border = "2px solid red";
+        }
     }
+    return nota;
 }
 
 function gravarDados() {
-    console.log("função para gravar dados")
+    console.log(respostas);
+    console.log("função para gravar dados");
 }
 
-function limpaDados() {
-    var inputs = document.getElementsByTagName("input");
 
-    selectTheme("padrao", 0);
-    for (i = 0; i <= 2; i++) {
-        inputs[i].value = '';
-        atividade.descricao = '';
-        atividade.data_inicio = '';
-        atividade.data_fim = '';
-    }
-
+function limpaDados(){
     for (var i = 0; i <= 9; i++) {
-        box1[i].innerHTML = '';
-        box1[i].innerText = 'Clique aqui e escolha um número';
-        box3[i].innerHTML = '';
-        box3[i].innerText = 'Clique aqui e escolha um número';
-        operadores[i].innerHTML = '';
-        operadores[i].innerText = 'Clique aqui e escolha um operador';
         resultado[i].innerHTML = '';
+        resultado[i].style.border = "1px dashed whitesmoke";
         resultado[i].innerText = 'Clique aqui e escolha o Resultado';
-        atividade.questao[i + 1][1] = '';
-        atividade.questao[i + 1][2] = '';
-        atividade.questao[i + 1][3] = '';
-        atividade.questao[i + 1][4] = '';
+        respostas.respostas[i] = '';
     }
 }
+

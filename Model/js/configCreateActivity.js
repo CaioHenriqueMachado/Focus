@@ -226,12 +226,16 @@ function limpaDados() {
     for (var i = 0; i <= 9; i++) {
         box1[i].innerHTML = '';
         box1[i].innerText = 'Clique aqui e escolha um número';
+        box1[i].style.border = "1px dashed whitesmoke";
         box3[i].innerHTML = '';
         box3[i].innerText = 'Clique aqui e escolha um número';
+        box3[i].style.border = "1px dashed whitesmoke";
         operadores[i].innerHTML = '';
         operadores[i].innerText = 'Clique aqui e escolha um operador';
+        operadores[i].style.border = "1px dashed whitesmoke";
         resultado[i].innerHTML = '';
         resultado[i].innerText = 'Clique aqui e escolha o Resultado';
+        resultado[i].style.border = "1px dashed whitesmoke";
         atividade.questao[i + 1][1] = '';
         atividade.questao[i + 1][2] = '';
         atividade.questao[i + 1][3] = '';
