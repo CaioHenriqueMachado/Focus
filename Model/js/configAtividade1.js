@@ -113,7 +113,7 @@ function validationConfig() {
         alert(`O campo ${inputs[indexVazio].name} deve ser preenchido !`);
     } else {
         alert(`Você finalizou essa atividade!`);
-        window.location.href = `www.uol.com.br`; 
+        window.location.href = `https://www.uol.com.br`; 
 
     }
 
@@ -145,19 +145,58 @@ function validationQuestion(question) {
             window.location.href = `#Question${question + 1}`;
         }else {
             window.location.href = `#configuracoes`; 
+            exibeAba(false);
         }
     }
 }
 
+
+
+var windowNumbers = document.getElementById("window");
+
+function exibeAba(exibir) {
+    if (exibir) {
+        windowNumbers.style.transition = "1s";
+        windowNumbers.style.display = "flex";
+    }else {
+        windowNumbers.style.transition = "1s";
+        windowNumbers.style.display = "none";
+    }
+}
+
+
+
+
+
 var theme = "classico";
 
-
-function selectTheme(type) {
+var selectedTheme = 0;
+function selectTheme(type, id) {
+    var imgBackground = document.getElementsByTagName("body");
+    var boxImages = document.getElementsByClassName("boxImages");
     var images = document.getElementsByClassName("imageTheme");
 
+    boxImages[selectedTheme].classList.remove("selectedTipo");
+    boxImages[id].classList.add("selectedTipo");
+    selectedTheme = id;
+
+    imgBackground[0].style.transition = "1s"
+    imgBackground[0].style.background = `url(../../images/numbers/${type}/background.jpg)`;
+    imgBackground[0].style.backgroundRepeat = "repeat-y";
+    imgBackground[0].style.backgroundSize = "100% 100vh";
+
     for(var i = 0; i <= 9; i++){
+        images[i].style.transition = "3s"
         images[i].src = `../../images/numbers/${type}/${i}.png`;
     }
-
     theme = type;
+}
+
+function backQuestion(id) {
+    if (id == 1) {
+        window.location = "#inicio";
+    }else {
+        window.location = `#Question${id - 1}`;
+        exibeAba(true);
+    }
 }

@@ -12,7 +12,7 @@
     <div class="opacity"></div>
 
 
-    <div class="block">
+    <div class="block" id="inicio">
         <div class="header">
             <h1>Atividade das Operações</h1>
         </div>
@@ -20,12 +20,35 @@
             <h2>Escolha qual tema será aplicado nessa atividade</h2>
 
             <div class="tipos">
-                <div onclick="selectTheme('monsters')">monsters</div>
-                <div onclick="selectTheme('hero')">Heróis</div>
-                <div onclick="selectTheme('festa')">Aniversário</div>
-                <div onclick="selectTheme('retro')">Retrô</div>
-                <div onclick="selectTheme('monster2')">monsters 2</div>
-                <div onclick="selectTheme('feras')">anjinhos</div>
+                <div class="boxImages selectedTipo" onclick="selectTheme('padrao',0)">
+                    <img src="../../images/icons/emoji_padrao.svg" alt="">
+                    Padrão
+                </div>
+                <div class="boxImages" onclick="selectTheme('festa',1)">
+                    <img src="../../images/icons/emoji_party.svg" alt="">
+                    Festa
+                </div>
+                <div class="boxImages" onclick="selectTheme('retro',2)">
+                    <img src="../../images/icons/emoji_hippie.svg" alt="">
+                    Retrô
+                </div>
+                <div class="boxImages" onclick="selectTheme('hero',3)">
+                    <img src="../../images/icons/emoji_heroes.svg" alt="">
+                    Heróis
+                </div>
+                <div class="boxImages" onclick="selectTheme('monsters',4)">
+                    <img src="../../images/icons/emoji_monster1.svg" alt="">
+                    Monstros 1
+                </div>
+                <div class="boxImages" onclick="selectTheme('monster2',5)">
+                    <img src="../../images/icons/emoji_monster2.svg" alt="">
+                    Monstros 2
+                </div>
+                <div class="boxImages" onclick="selectTheme('feras',6)">
+                    <img src="../../images/icons/emoji_monster3.svg" alt="">
+                    Monstros 3
+                </div>
+                
             </div>
 
             <a href="#Question1">Avançar</a>
@@ -58,11 +81,14 @@
             </div>
 
             <div class="mini-box resultado" id="resultado" onclick="inputBox(1,4)">
-                    Clique aqui e escolha o Resultado
+                Clique aqui e escolha o Resultado
             </div>
 
             <div class="mini-box" id="check">
-                <a onclick="validationQuestion(1)"><img src="../../images/icons/check.png" alt=""></a>
+                <img class="check" onclick="validationQuestion(1)" src="../../images/icons/check.png" alt="">
+                <div class="backIcon" onclick="backQuestion(1)">
+                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -95,7 +121,10 @@
             </div>
 
             <div class="mini-box" id="check">
-                <a onclick="validationQuestion(2)"><img src="../../images/icons/check.png" alt=""></a>
+                <img class="check" onclick="validationQuestion(2)" src="../../images/icons/check.png" alt="">
+                <div class="backIcon" onclick="backQuestion(2)">
+                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -127,7 +156,10 @@
             </div>
 
             <div class="mini-box" id="check">
-                <a href="#Question2"><img src="../../images/icons/check.png" alt=""></a>
+                <img class="check" onclick="validationQuestion(3)" src="../../images/icons/check.png" alt="">
+                <div class="backIcon" onclick="backQuestion(3)">
+                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -160,7 +192,10 @@
             </div>
 
             <div class="mini-box" id="check">
-                <a href="#Question2"><img src="../../images/icons/check.png" alt=""></a>
+                <img class="check" onclick="validationQuestion(4)" src="../../images/icons/check.png" alt="">
+                <div class="backIcon" onclick="backQuestion(4)">
+                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -193,7 +228,10 @@
             </div>
 
             <div class="mini-box" id="check">
-                <a href="#Question2"><img src="../../images/icons/check.png" alt=""></a>
+                <img class="check" onclick="validationQuestion(5)" src="../../images/icons/check.png" alt="">
+                <div class="backIcon" onclick="backQuestion(5)">
+                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -226,7 +264,10 @@
             </div>
 
             <div class="mini-box" id="check">
-                <a href="#Question2"><img src="../../images/icons/check.png" alt=""></a>
+                <img class="check" onclick="validationQuestion(6)" src="../../images/icons/check.png" alt="">
+                <div class="backIcon" onclick="backQuestion(6)">
+                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -259,7 +300,10 @@
             </div>
 
             <div class="mini-box" id="check">
-                <a href="#Question2"><img src="../../images/icons/check.png" alt=""></a>
+                <img class="check" onclick="validationQuestion(7)" src="../../images/icons/check.png" alt="">
+                <div class="backIcon" onclick="backQuestion(7)">
+                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -291,7 +335,10 @@
             </div>
 
             <div class="mini-box" id="check">
-                <a href="#Question2"><img src="../../images/icons/check.png" alt=""></a>
+                <img class="check" onclick="validationQuestion(8)" src="../../images/icons/check.png" alt="">
+                <div class="backIcon" onclick="backQuestion(8)">
+                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -300,6 +347,41 @@
     <!-- QUESTÃO 9 -->
     <div class="question" id="Question9">
         <h1 class="titleQuestion">Questão 9</h1>
+        <div class="box">
+            <div class="mini-box box1" onclick="inputBox(9,1)">
+                Clique aqui e escolha um número
+            </div>
+
+            <div class="mini-box operador" id="operador" onclick="inputBox(9,2)">
+                Clique aqui e escolha um operador
+            </div>
+
+            <div class="mini-box box3" onclick="inputBox(9,3)">
+                Clique aqui e escolha um número
+            </div>
+
+            <div class=" mini-box" id="sinalIgual">
+                <!-- <h1>=</h1> -->
+                <img src="../../images/numbers/operadores/igual.png" alt="">
+
+            </div>
+
+            <div class="mini-box resultado" id="resultado" onclick="inputBox(9,4)">
+                    Clique aqui e escolha o Resultado
+            </div>
+
+            <div class="mini-box" id="check">
+                <img class="check" onclick="validationQuestion(9)" src="../../images/icons/check.png" alt="">
+                <div class="backIcon" onclick="backQuestion(9)">
+                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUESTÃO 10 -->
+    <div class="question" id="Question10">
+        <h1 class="titleQuestion">Questão 10</h1>
         <div class="box">
             <div class="mini-box box1" onclick="inputBox(10,1)">
                 Clique aqui e escolha um número
@@ -323,40 +405,12 @@
                     Clique aqui e escolha o Resultado
             </div>
 
-            <div class="mini-box" id="check">
-                <a href="#Question2"><img src="../../images/icons/check.png" alt=""></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- QUESTÃO 10 -->
-    <div class="question" id="Question10">
-        <h1 class="titleQuestion">Questão 10</h1>
-        <div class="box">
-            <div class="mini-box box1" onclick="box1(10)">
-                Clique aqui e escolha um número
-            </div>
-
-            <div class="mini-box operador" id="operador" onclick="operador(10)">
-                Clique aqui e escolha um operador
-            </div>
-
-            <div class="mini-box box3" onclick="box3(10)">
-                Clique aqui e escolha um número
-            </div>
-
-            <div class=" mini-box" id="sinalIgual">
-                <!-- <h1>=</h1> -->
-                <img src="../../images/numbers/operadores/igual.png" alt="">
-            </div>
-
-            <div class="mini-box" id="resultado">
-                    Clique aqui e escolha o Resultado
-            </div>
-
 
             <div class="mini-box" id="check">
-                <a href="#Question1"><img src="../../images/icons/check.png" alt=""></a>
+                <img class="check" onclick="validationQuestion(10)" src="../../images/icons/check.png" alt="">
+                <div class="backIcon" onclick="backQuestion(10)">
+                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -379,41 +433,45 @@
             <br>
             Data de finalização
             <input type="date" name="Data de finalização" id="">
-            <a id="SaveConfigs" onclick="validationConfig()">Salvar</a>
+            <div>
+                <div class="btn-config" id="Back" onclick="backQuestion(11)">Voltar</div>
+                <div class="btn-config" id="SaveConfigs" onclick="validationConfig()">Salvar</div>
+            </div>
+            
         </div>
     </div>
 
 
-    <div class="window">
+    <div class="window" id="window">
         <div class="images" onclick="selectedFigure(0)">
-            <img class="imageTheme" src="../../images/numbers/classico/0.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/padrao/0.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(1)">
-            <img class="imageTheme" src="../../images/numbers/classico/1.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/padrao/1.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(2)">
-            <img class="imageTheme" src="../../images/numbers/classico/2.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/padrao/2.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(3)">
-            <img class="imageTheme" src="../../images/numbers/classico/3.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/padrao/3.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(4)">
-            <img class="imageTheme" src="../../images/numbers/classico/4.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/padrao/4.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(5)">
-            <img class="imageTheme" src="../../images/numbers/classico/5.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/padrao/5.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(6)">
-            <img class="imageTheme" src="../../images/numbers/classico/6.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/padrao/6.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(7)">
-            <img class="imageTheme" src="../../images/numbers/classico/7.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/padrao/7.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(8)">
-            <img class="imageTheme" src="../../images/numbers/classico/8.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/padrao/8.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(9)">
-            <img class="imageTheme" src="../../images/numbers/classico/9.png" alt="">
+            <img class="imageTheme" src="../../images/numbers/padrao/9.png" alt="">
         </div>
         <div class="images" onclick="selectedFigure(11)">
             <img class="imageTheme" src="../../images/numbers/operadores/11.png" alt="">
