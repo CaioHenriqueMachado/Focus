@@ -61,23 +61,44 @@ function saveName() {
 
 // Ativar Frame
 
-var divBackgroundGray = document.getElementById("x");
 
-function openTask() {
-    divBackgroundGray.innerHTML = 
-    `<div id="backgroundGray">
-        <div class="container-iframe">
-            <div class="border">
-                <h2>Focus</h2>
-                <div class="buttonExit" onclick="closeTask()">X</div>
+function CreateActivity(open) {
+    var divopenCreateActivity = document.getElementById("openCreateActivity");
+    if (open){
+        divopenCreateActivity.innerHTML = 
+        `<div id="backgroundGray">
+            <div class="container-iframe">
+                <div class="border">
+                    <h2>Focus</h2>
+                    <div class="buttonExit" onclick="CreateActivity(false)">X</div>
+                </div>
+                <iframe id="frame" src="../Atividades/createActivity/index.html" frameborder="0"></iframe>
             </div>
-            <iframe id="frame" src="../Atividades/Atividade01/index.html" frameborder="0"></iframe>
-        </div>
-    </div>`
+        </div>`
+    }else {
+        if (confirm("Se fechar alterações feitas não sejam salvas.")){
+            divopenCreateActivity.innerHTML = '';
+        }
+    }
 }
 
-function closeTask() {
-    if (confirm("Se fechar alterações feitas não sejam salvas.")){
-        divBackgroundGray.innerHTML = '';
+
+function Activity(id, open) {
+    var divActivity = document.getElementById("doActivity");
+    if (open){
+        divActivity.innerHTML = 
+        `<div id="backgroundGray">
+            <div class="container-iframe">
+                <div class="border">
+                    <h2>Focus</h2>
+                    <div class="buttonExit" onclick="Activity(${id}, false)">X</div>
+                </div>
+                <iframe id="frame" src="../Atividades/doActivity/index.html" frameborder="0"></iframe>
+            </div>
+        </div>`
+    }else {
+        if (confirm("Se fechar alterações feitas não sejam salvas.")){
+            divActivity.innerHTML = '';
+        }
     }
 }
