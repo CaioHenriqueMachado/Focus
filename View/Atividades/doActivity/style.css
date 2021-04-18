@@ -1,0 +1,215 @@
+@import "https://fonts.googleapis.com/css?family=Oswald:300,400,700";*
+
+{
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    font-family: Oswald, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    /* overflow-y: hidden; */
+}
+
+input,
+button,
+textarea {
+  font-family: 400 18px Oswald, Helvetica, sans-serif;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url(../../images/numbers/padrao/background.jpg);
+    background-repeat: repeat-y;
+    background-size: 100% 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+
+div.opacity {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: -1;
+}
+
+div.block {
+    width: 100%;
+    height: 100vh;
+}
+
+div.header {
+    display: flex;
+    width: 100%;
+    height: 20%;
+}
+
+div.header h1 {
+    width: 100%;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 50px;
+    font-family: Oswald, Helvetica, sans-serif;
+}
+
+
+div.configuracoes {
+    width: 80%;
+    height: 68%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 5px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16pt;
+    z-index: 100;
+}
+
+div.configuracoes input {
+    color: black;
+    width: 200px;
+    height: 30px;
+    font-size: 14pt;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+div.configuracoes div {
+    display: flex;
+    margin-top: 10px;
+}
+
+div.btn-config {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div#Back {
+    background-color: rgb(219, 18, 69);
+    margin-right: 10px;
+}
+
+div#SaveConfigs {
+    background-color: rgb(13, 163, 13);
+}
+
+div.question {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+div.question h1.titleQuestion{
+    font-size: 40px;
+    margin: 50px 0;
+}
+
+div.box {
+    border: 2px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+
+div.mini-box-images {
+    width: 600px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.mini-box-resultado {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border:  1px dashed whitesmoke;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+div.mini-box-resultado img, div.mini-box-resultado img{
+    width: 100px;
+    height: 100%;
+}
+
+
+div#check {
+    width: 100px;
+    cursor:default;
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+div#check img.check {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    filter: brightness(20%);
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 5px;
+}
+
+div#check img.check:hover, div.backIcon:hover  {
+    transition: 0.2s;
+    filter: brightness(100%);
+}
+
+div.backIcon {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 6, 6);
+    border-radius: 50%;
+    filter: brightness(20%);
+    cursor: pointer;
+}
+
+div.backIcon img.back {
+    width: 70%;
+    height: 100%;
+}
+
+div.window {
+    width: 79%;
+    height: 120px;
+    display: flex;
+    bottom: 0;
+    margin: 0 10%;
+    position: fixed;
+    background-color: whitesmoke;
+    border: 5px solid black;
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+}
+
+div.images {
+    width: 74px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+div.images img {
+    width: 100%;
+    height: 100%;
+}
