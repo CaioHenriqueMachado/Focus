@@ -1,7 +1,10 @@
-var box1 = document.getElementsByClassName("box1");
-var operadores = document.getElementsByClassName("operador");
-var box3 = document.getElementsByClassName("box3");
-var resultado = document.getElementsByClassName("resultado");
+var input1 = document.getElementsByClassName("input-1");
+var input2 = document.getElementsByClassName("input-2");
+var input3 = document.getElementsByClassName("input-3");
+
+var boxResult = document.getElementsByClassName("box-result");
+
+var theme = "padrao";
 
 var atividade = {
     id: 1,
@@ -22,6 +25,52 @@ var atividade = {
         10: { 1: "", 2: "", 3: "", 4: "" },
     }
 }
+
+function calcular(id) {
+    if (input1[id].value.length == 0) {
+        alert("Escolha o primeiro número!");
+        return;
+    }
+
+    if (input2[id].value.length == 0) {
+        alert("Escolha o operador!");
+        return;
+    }
+
+    if (input3[id].value.length == 0) {
+        alert("Escolha o segundo número!");
+        return;
+    }
+    
+
+    var result = [input1[id].value, input2[id].value, input3[id].value];
+
+
+    console.log(result.length)
+
+    boxResult[id].innerHTML = '';
+    for (var i =0; i <result[0].length; i++){
+        boxResult[id].innerHTML += `<img src="../../images/numbers/${theme}/${result[0].substr(i,1)}.png" alt="">`;
+    }
+
+    boxResult[id].innerHTML += `<img src="../../images/numbers/operadores/${result[1]}.png" alt="">`;
+
+    for (var i =0; i <result[2].length; i++){
+        boxResult[id].innerHTML += `<img src="../../images/numbers/${theme}/${result[2].substr(i,1)}.png" alt="">`;
+    }
+
+
+    
+}
+
+
+
+var box1 = document.getElementsByClassName("box1");
+var operadores = document.getElementsByClassName("operador");
+var box3 = document.getElementsByClassName("box3");
+var resultado = document.getElementsByClassName("resultado");
+
+
 
 
 var indexQuestion;
@@ -173,7 +222,7 @@ function exibeAba(exibir) {
 }
 
 
-var theme = "padrao";
+
 
 var selectedTheme = 0;
 function selectTheme(type, id) {

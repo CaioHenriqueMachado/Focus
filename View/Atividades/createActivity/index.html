@@ -108,30 +108,30 @@
         <h1 class="titleQuestion">Questão 1</h1>
         <div class="box">
             Escolha o primeiro número
-            <input type="number" name="" id="">
+            <input class="input-1" type="number" name="" id="">
             Selecione uma operação
-            <select name="operações" id="">
+            <select class="input-2" name="operações" id="truta">
                 <option value="" selected>Selecione</option>
-                <option value="">Soma (+)</option>
-                <option value="">Subtração (-)</option>
-                <option value="">Divisão (/)</option>
-                <option value="">Multiplicação (x)</option>
+                <option value="11">Soma (+)</option>
+                <option value="12">Subtração (-)</option>
+                <option value="13">Divisão (/)</option>
+                <option value="14">Multiplicação (x)</option>
             </select>
             Escolha o segundo número
-            <input type="number" name="" id="">
+            <input class="input-3" type="number" name="" id="">
 
             <div class="btn-calculos">
                 <div class="btn-limpar">
                     Limpar
                 </div>
-                <div class="btn-calcular">
+                <div class="btn-calcular" onclick="calcular(0)">
                     Calcular
                 </div>
             </div>
         </div>
 
         <div class="box-result">
-            números
+            <!-- <img src="../../images/numbers/operadores/igual.png" alt=""> -->
         </div>
 
         <div class="btn-question">
@@ -145,7 +145,7 @@
     </div>
 
     <!-- QUESTÃO 2 -->
-    <div class="question" id="Question1">
+    <div class="question" id="Question2">
         <h1 class="titleQuestion">Questão 1</h1>
         <div class="box">
             Escolha o primeiro número
@@ -172,7 +172,6 @@
         </div>
 
         <div class="box-result">
-            números
         </div>
 
         <div class="btn-question">
@@ -181,41 +180,6 @@
             </div>
             <div class="btn-save">
                 Salvar Questão
-            </div>
-        </div>
-    </div>
-
-    <!-- QUESTÃO 2 -->
-    <div class="question" id="Question2">
-        <h1 class="titleQuestion">Questão 2</h1>
-        <div class="box">
-            <div class="mini-box box1" onclick="inputBox(2,1)">
-                Clique aqui e escolha um número
-            </div>
-
-            <div class="mini-box operador" id="operador" onclick="inputBox(2,2)">
-                Clique aqui e escolha um operador
-            </div>
-
-            <div class="mini-box box3" onclick="inputBox(2,3)">
-                Clique aqui e escolha um número
-            </div>
-
-            <div class=" mini-box" id="sinalIgual">
-                <!-- <h1>=</h1> -->
-                <img src="../../images/numbers/operadores/igual.png" alt="">
-
-            </div>
-
-            <div class="mini-box resultado" id="resultado" onclick="inputBox(2,4)">
-                Clique aqui e escolha o Resultado
-            </div>
-
-            <div class="mini-box" id="check">
-                <img class="check" onclick="validationQuestion(2)" src="../../images/icons/check.png" alt="">
-                <div class="backIcon" onclick="backQuestion(2)">
-                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
-                </div>
             </div>
         </div>
     </div>

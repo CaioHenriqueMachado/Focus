@@ -230,7 +230,7 @@ div.btn-calcular:hover {
 
 
 div.box-result {
-    display: none;
+    display: flex;
     margin-top: 10px;
     width: 80%;
     height: 150px;
