@@ -19,37 +19,37 @@
 
         <div class="configuracoes" id="configuracoes">
             <h2>Configurações</h2>
-    
+
             Nome da Tarefa
             <input type="text" name="Nome da Tarefa" id="">
             <br>
             Quantidade de Questões
             <select name="Quantidade de Questões" id="">
                 <option value="" selected>Selecione</option>
-                <option value="" >1 Questão</option>
-                <option value="" >2 Questões</option>
-                <option value="" >3 Questões</option>
-                <option value="" >4 Questões</option>
-                <option value="" >5 Questões</option>
-                <option value="" >6 Questões</option>
-                <option value="" >7 Questões</option>
-                <option value="" >8 Questões</option>
-                <option value="" >9 Questões</option>
-                <option value="" >10 Questões</option>
+                <option value="">1 Questão</option>
+                <option value="">2 Questões</option>
+                <option value="">3 Questões</option>
+                <option value="">4 Questões</option>
+                <option value="">5 Questões</option>
+                <option value="">6 Questões</option>
+                <option value="">7 Questões</option>
+                <option value="">8 Questões</option>
+                <option value="">9 Questões</option>
+                <option value="">10 Questões</option>
 
             </select>
-            
+
             <br>
             <div>
                 <div>
                     Data de abertura
                     <input type="date" name="Data de abertura" id="">
                 </div>
-                
+
                 <div>
                     Data de finalização
                     <input type="date" name="Data de finalização" id="">
-                </div>                
+                </div>
             </div>
 
             <div>
@@ -95,7 +95,7 @@
                     <img src="../../images/icons/emoji_monster3.svg" alt="">
                     Monstros 3
                 </div>
-                
+
             </div>
 
             <a href="#Question1">Avançar</a>
@@ -103,43 +103,87 @@
     </div>
 
 
-
-
     <!-- QUESTÃO 1 -->
     <div class="question" id="Question1">
         <h1 class="titleQuestion">Questão 1</h1>
         <div class="box">
-            <div class="mini-box box1" onclick="inputBox(1,1)">
-                Clique aqui e escolha um número
-            </div>
+            Escolha o primeiro número
+            <input type="number" name="" id="">
+            Selecione uma operação
+            <select name="operações" id="">
+                <option value="" selected>Selecione</option>
+                <option value="">Soma (+)</option>
+                <option value="">Subtração (-)</option>
+                <option value="">Divisão (/)</option>
+                <option value="">Multiplicação (x)</option>
+            </select>
+            Escolha o segundo número
+            <input type="number" name="" id="">
 
-            <div class="mini-box operador" id="operador" onclick="inputBox(1,2)">
-                Clique aqui e escolha um operador
-            </div>
-
-            <div class="mini-box box3" onclick="inputBox(1,3)">
-                Clique aqui e escolha um número
-            </div>
-
-            <div class=" mini-box" id="sinalIgual">
-                <!-- <h1>=</h1> -->
-                <img src="../../images/numbers/operadores/igual.png" alt="">
-
-            </div>
-
-            <div class="mini-box resultado" id="resultado" onclick="inputBox(1,4)">
-                Clique aqui e escolha o Resultado
-            </div>
-
-            <div class="mini-box" id="check">
-                <img class="check" onclick="validationQuestion(1)" src="../../images/icons/check.png" alt="">
-                <div class="backIcon" onclick="backQuestion(1)">
-                    <img class="back" src="../../images/icons/arrowBack.svg" alt="">
+            <div class="btn-calculos">
+                <div class="btn-limpar">
+                    Limpar
                 </div>
+                <div class="btn-calcular">
+                    Calcular
+                </div>
+            </div>
+        </div>
+
+        <div class="box-result">
+            números
+        </div>
+
+        <div class="btn-question">
+            <div class="btn-anterior">
+                Questão Anterior
+            </div>
+            <div class="btn-save">
+                Salvar Questão
             </div>
         </div>
     </div>
 
+    <!-- QUESTÃO 2 -->
+    <div class="question" id="Question1">
+        <h1 class="titleQuestion">Questão 1</h1>
+        <div class="box">
+            Escolha o primeiro número
+            <input type="number" name="" id="">
+            Selecione uma operação
+            <select name="operações" id="">
+                <option value="" selected>Selecione</option>
+                <option value="">Soma (+)</option>
+                <option value="">Subtração (-)</option>
+                <option value="">Divisão (/)</option>
+                <option value="">Multiplicação (x)</option>
+            </select>
+            Escolha o segundo número
+            <input type="number" name="" id="">
+
+            <div class="btn-calculos">
+                <div class="btn-limpar">
+                    Limpar
+                </div>
+                <div class="btn-calcular">
+                    Calcular
+                </div>
+            </div>
+        </div>
+
+        <div class="box-result">
+            números
+        </div>
+
+        <div class="btn-question">
+            <div class="btn-anterior">
+                Questão Anterior
+            </div>
+            <div class="btn-save">
+                Salvar Questão
+            </div>
+        </div>
+    </div>
 
     <!-- QUESTÃO 2 -->
     <div class="question" id="Question2">
@@ -164,7 +208,7 @@
             </div>
 
             <div class="mini-box resultado" id="resultado" onclick="inputBox(2,4)">
-                    Clique aqui e escolha o Resultado
+                Clique aqui e escolha o Resultado
             </div>
 
             <div class="mini-box" id="check">
@@ -199,7 +243,7 @@
             </div>
 
             <div class="mini-box resultado" id="resultado" onclick="inputBox(3,4)">
-                    Clique aqui e escolha o Resultado
+                Clique aqui e escolha o Resultado
             </div>
 
             <div class="mini-box" id="check">
@@ -235,7 +279,7 @@
             </div>
 
             <div class="mini-box resultado" id="resultado" onclick="inputBox(4,4)">
-                    Clique aqui e escolha o Resultado
+                Clique aqui e escolha o Resultado
             </div>
 
             <div class="mini-box" id="check">
@@ -271,7 +315,7 @@
             </div>
 
             <div class="mini-box resultado" id="resultado" onclick="inputBox(5,4)">
-                    Clique aqui e escolha o Resultado
+                Clique aqui e escolha o Resultado
             </div>
 
             <div class="mini-box" id="check">
@@ -307,7 +351,7 @@
             </div>
 
             <div class="mini-box resultado" id="resultado" onclick="inputBox(6,4)">
-                    Clique aqui e escolha o Resultado
+                Clique aqui e escolha o Resultado
             </div>
 
             <div class="mini-box" id="check">
@@ -343,7 +387,7 @@
             </div>
 
             <div class="mini-box resultado" id="resultado" onclick="inputBox(7,4)">
-                    Clique aqui e escolha o Resultado
+                Clique aqui e escolha o Resultado
             </div>
 
             <div class="mini-box" id="check">
@@ -378,7 +422,7 @@
             </div>
 
             <div class="mini-box resultado" id="resultado" onclick="inputBox(8,4)">
-                    Clique aqui e escolha o Resultado
+                Clique aqui e escolha o Resultado
             </div>
 
             <div class="mini-box" id="check">
@@ -414,7 +458,7 @@
             </div>
 
             <div class="mini-box resultado" id="resultado" onclick="inputBox(9,4)">
-                    Clique aqui e escolha o Resultado
+                Clique aqui e escolha o Resultado
             </div>
 
             <div class="mini-box" id="check">
@@ -449,7 +493,7 @@
             </div>
 
             <div class="mini-box resultado" id="resultado" onclick="inputBox(10,4)">
-                    Clique aqui e escolha o Resultado
+                Clique aqui e escolha o Resultado
             </div>
 
 
