@@ -121,8 +121,9 @@ div.configuracoes {
     z-index: 100;
 }
 
-div.configuracoes input {
+div.configuracoes input,div.configuracoes select {
     color: black;
+    background-color: white;
     width: 200px;
     height: 30px;
     font-size: 14pt;
@@ -130,10 +131,32 @@ div.configuracoes input {
     border-radius: 5px;
 }
 
+div.configuracoes select {
+    width: 220px !important;
+}
+
+option {
+    color: black;
+}
+
 div.configuracoes div {
     display: flex;
     margin-top: 10px;
 }
+
+div.configuracoes div div {
+    align-items: center;
+    margin-left: 10px;
+    flex-direction: column;
+}
+
+/* div.configuracoes select {
+    color: black;
+    font-size: 14pt;
+    width: 200px;
+    height: 30px;
+} */
+
 
 div.btn-config {
     width: 100px;
