@@ -6,7 +6,7 @@
     color: whitesmoke;
     font-family: Oswald, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 input,
@@ -180,10 +180,10 @@ div#Back {
 div#SaveConfigs {
     background-color: rgb(13, 163, 13);
 }
-
+/* FFF */
 div.question {
     height: 100vh;
-    display: none;
+    display: flex;
     align-items: center;
     flex-direction: column;
     font-size: 24px;
@@ -194,6 +194,11 @@ div.question h1.titleQuestion{
     margin: 10px 0;
 }
 
+div.main-box {
+    display: flex;
+    margin: 0 auto;
+}
+
 div.box {
     border: 2px solid whitesmoke;
     display: flex;
@@ -201,8 +206,8 @@ div.box {
     align-items: center;
     min-width: 400px;
     border-radius: 10px;
-    margin: 0 auto;
     padding: 10px 5px;
+    margin-right: 10px;
 }
 
 
@@ -242,6 +247,16 @@ div.btn-calcular:hover {
     transition: .5s;
 }
 
+div.boxAudio {
+    border: 2px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px;
+    border-radius: 10px;
+    
+    padding: 10px 5px;
+}
 
 div.box-result {
     display: none;
@@ -318,6 +333,19 @@ div.images img {
     height: 100%;
 }
 
+img#micro {
+    width: 50px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+img#micro:hover {
+    filter: opacity(90%);
+}
+
+img#micro:active {
+    background: url(../../images/icons/detail.svg);
+}
 
 div#blackBlock {
     position: absolute;

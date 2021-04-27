@@ -100,29 +100,39 @@
     <!-- QUESTÃO 1 -->
     <div class="question" id="Question1">
         <h1 class="titleQuestion">Questão 1</h1>
-        <div class="box">
-            Escolha o primeiro número
-            <input class="input-1" type="number" name="" id="">
-            Selecione uma operação
-            <select class="input-2" name="operações">
-                <option value="" selected>Selecione</option>
-                <option value="11">Soma (+)</option>
-                <option value="12">Subtração (-)</option>
-                <option value="14">Divisão (/)</option>
-                <option value="13">Multiplicação (x)</option>
-            </select>
-            Escolha o segundo número
-            <input class="input-3" type="number" name="" id="" min="-999" max="999">
-
-            <div class="btn-calculos">
-                <div class="btn-limpar" onclick="limpar(0)">
-                    Limpar
-                </div>
-                <div class="btn-calcular" onclick="calcular(0)">
-                    Calcular
+        <div class="main-box">
+            <div class="box">
+                Escolha o primeiro número
+                <input class="input-1" type="number" name="" id="">
+                Selecione uma operação
+                <select class="input-2" name="operações">
+                    <option value="" selected>Selecione</option>
+                    <option value="11">Soma (+)</option>
+                    <option value="12">Subtração (-)</option>
+                    <option value="14">Divisão (/)</option>
+                    <option value="13">Multiplicação (x)</option>
+                </select>
+                Escolha o segundo número
+                <input class="input-3" type="number" name="" id="" min="-999" max="999">
+    
+                <div class="btn-calculos">
+                    <div class="btn-limpar" onclick="limpar(0)">
+                        Limpar
+                    </div>
+                    <div class="btn-calcular" onclick="calcular(0)">
+                        Calcular
+                    </div>
                 </div>
             </div>
+            <div class="boxAudio">
+                Observação da Tarefa
+            <textarea id="story" name="story" rows="10" cols="50"></textarea>
+  
+                Narrativa da Atividade
+                <img src="../../images/icons/microphone.png" alt="" id="micro">
+            </div>
         </div>
+        
 
         <div class="box-result ocult-box"></div>
 
@@ -508,14 +518,7 @@
         <div class="configuracoes" id="anotacao">
             <h2>Anotações Finais</h2>
 
-            <br>
-            Observação da Tarefa
-            <textarea id="story" name="story" rows="10" cols="50"></textarea>
-            <br>
-
-            Documento de Apoio
-            <input type="file" name="" id="">
-
+            
             <div>
                 <div class="btn-config" id="SaveConfigs" onclick="finish()">Salvar</div>
             </div>

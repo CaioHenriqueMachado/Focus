@@ -435,10 +435,12 @@ div.box-config  div.inputName {
 }
 
 div.buttonSave {
-	width: 30px;
+	width: 60px;
 	height: 30px;
 	margin-left: 10px;
 	background-color: #8257e5;
+	color: black;
+	font-weight: bold;
 	border-radius: 5px;
 	padding: 2px;
 	border: 2px solid black;
