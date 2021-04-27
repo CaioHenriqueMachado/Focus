@@ -227,7 +227,7 @@ function createQuestion(qtd) {
         questoes[i].style.display = "flex";
         if (i + 1 == qtd) {
             buttons[i].innerHTML =
-                `<a href="#anotacao">Fim</a>`
+                `<a onclick="finish()">Fim</a>`
         }
     }
 }
