@@ -64,19 +64,27 @@ PENDENTES
 
 
 
+- descer o botão de salvar
+- Ajustar contas de atividades pendentes.
+- Inserir scroll ao finalizar o conteudo.
+- Tirar nota de atividades criadas e pendentes.
+banco de dados
 
 
 - Fazer calculo automatico.
 - Escolher quantidade de questões que vai ter na tarefa
-- Alerta avisando que as configurações foram salvas
+
+
+
+
 - Ao clicar na foto, ir para aba configurações
 - subir a tela de configurações
-- Inserir scroll ao finalizar o conteudo.
+
 (Tentar inserir )
 
 
 
-banco de dados
+
 
 
 

@@ -55,6 +55,7 @@ function validationConfig() {
     if (campoVazio) {
         alert(`O campo ${inputs[indexVazio].name} deve ser preenchido !`);
     } else {
+        createQuestion(atividade.qdt_questoes);
         window.location.href = `#inicio`;
         exibeAba(true);
     }
@@ -129,36 +130,37 @@ function calcular(id) {
         return;
     }
 
-    if ( -999 > input1[id].value || -999 > input3[id].value ||  999 < input1[id].value || 999 < input3[id].value ) {
+    if (-999 > input1[id].value || -999 > input3[id].value || 999 < input1[id].value || 999 < input3[id].value) {
         alert("Apenas valores entre -999 até 999");
         return;
     }
 
-    var components = document.getElementsByClassName("ocult");
-    components[0].style.display = "flex";
-    components[1].style.display = "block";
-    
+    var boxResult = document.getElementsByClassName("ocult-box");
+    var btnSave = document.getElementsByClassName("ocult-btn");
+    boxResult[id].style.display = "flex";
+    btnSave[id].style.display = "block";
+
     var result = [input1[id].value, input2[id].value, input3[id].value];
-    
+
     boxResult[id].innerHTML = '';
-    atividade.questao[id+1][1] = result[0]
-    for (var i =0; i <result[0].length; i++){
-        if (result[0].substr(i,1) == '-' && i == 0){
+    atividade.questao[id + 1][1] = result[0]
+    for (var i = 0; i < result[0].length; i++) {
+        if (result[0].substr(i, 1) == '-' && i == 0) {
             boxResult[id].innerHTML += `<img src="../../images/numbers/operadores/${12}.png" alt="">`;
         } else {
-            boxResult[id].innerHTML += `<img src="../../images/numbers/${theme}/${result[0].substr(i,1)}.png" alt="">`;
+            boxResult[id].innerHTML += `<img src="../../images/numbers/${theme}/${result[0].substr(i, 1)}.png" alt="">`;
         }
     }
 
-    atividade.questao[id+1][2] = result[1]
+    atividade.questao[id + 1][2] = result[1]
     boxResult[id].innerHTML += `<img src="../../images/numbers/operadores/${result[1]}.png" alt="">`;
-    
-    atividade.questao[id+1][3] = result[2]
-    for (var i =0; i <result[2].length; i++){
-        if (result[2].substr(i,1) == '-' && i == 0){
+
+    atividade.questao[id + 1][3] = result[2]
+    for (var i = 0; i < result[2].length; i++) {
+        if (result[2].substr(i, 1) == '-' && i == 0) {
             boxResult[id].innerHTML += `<img src="../../images/numbers/operadores/${12}.png" alt="">`;
         } else {
-            boxResult[id].innerHTML += `<img src="../../images/numbers/${theme}/${result[2].substr(i,1)}.png" alt="">`;
+            boxResult[id].innerHTML += `<img src="../../images/numbers/${theme}/${result[2].substr(i, 1)}.png" alt="">`;
         }
     }
 
@@ -167,61 +169,79 @@ function calcular(id) {
 
     var calculo = '(' + result[0] + ')';
 
-    if(result[1] == 11){
+    if (result[1] == 11) {
         calculo += '+';
 
-    } else if(result[1] == 12){
+    } else if (result[1] == 12) {
         calculo += '-';
 
-    } else if(result[1] == 13){
+    } else if (result[1] == 13) {
         calculo += '*';
 
-    }else {
+    } else {
         calculo += '/';
     }
 
     calculo += '(' + result[2] + ')';
     calculo = String(Math.round(eval(calculo) * 100) / 100);
-    atividade.questao[id+1][4] = calculo;
+    atividade.questao[id + 1][4] = calculo;
 
 
-    for (var i =0; i < calculo.length; i++){
-        if (calculo.substr(i,1) == '-'){
+    for (var i = 0; i < calculo.length; i++) {
+        if (calculo.substr(i, 1) == '-') {
             boxResult[id].innerHTML += `<img src="../../images/numbers/operadores/${12}.png" alt="">`;
-        
-        } else if (calculo.substr(i,1) == '.'){
+
+        } else if (calculo.substr(i, 1) == '.') {
             boxResult[id].innerHTML += `<img src="../../images/numbers/operadores/${16}.png" alt="">`;
 
         } else {
-            boxResult[id].innerHTML += `<img src="../../images/numbers/${theme}/${calculo.substr(i,1)}.png" alt="">`;
+            boxResult[id].innerHTML += `<img src="../../images/numbers/${theme}/${calculo.substr(i, 1)}.png" alt="">`;
         }
     }
 
-    console.log(atividade.questao[1])
+    console.log(atividade.questao[id + 1])
 }
 
+function limpar(id) {
+    var boxResult = document.getElementsByClassName("ocult-box");
+    var btnSave = document.getElementsByClassName("ocult-btn");
 
+    boxResult[id].style.display = "none";
+    btnSave[id].style.display = "none";
 
+    var input1 = document.getElementsByClassName("input-1");
+    var input2 = document.getElementsByClassName("input-2");
+    var input3 = document.getElementsByClassName("input-3");
 
+    input1[id].value = '';
 
+    input2[id].value = '';
 
+    input3[id].value = '';
+}
 
+function createQuestion(qtd) {
+    var questoes = document.getElementsByClassName("question");
+    var buttons = document.getElementsByClassName("btn-save");
+    for (i = 0; i < qtd; i++) {
+        questoes[i].style.display = "flex";
+        if (i + 1 == qtd) {
+            buttons[i].innerHTML =
+                `<a href="#anotacao">Fim</a>`
+        }
+    }
+}
 
-
-
-
-
-
-
-
+function finish() {
+    document.getElementById("blackBlock").style.display = "flex";
+    alert("Atividade finalizada !");
+    window.location = "#nov";
+}
 
 var box1 = document.getElementsByClassName("box1");
 var operadores = document.getElementsByClassName("operador");
 var box3 = document.getElementsByClassName("box3");
 var resultado = document.getElementsByClassName("resultado");
-
-
-
 
 var indexQuestion;
 var indexBox;
@@ -232,152 +252,5 @@ function inputBox(question, numberBox) {
     clique = true
 }
 
-// function selectedFigure(id) {
-//     if (clique) {
-//         if (indexBox == 1) {
-//             if (id < 10) {
-//                 box1[indexQuestion - 1].innerText = '';
-//                 box1[indexQuestion - 1].style.border = "none";
-//                 limitNumberBox(indexQuestion, indexBox, id, 2);
 
-//                 for (var index in atividade.questao[indexQuestion][indexBox]) {
-//                     var id = atividade.questao[indexQuestion][indexBox].substr(index, 1)
-//                     box1[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/${theme}/${id}.png" alt="">`;
-//                 }
-//             }
-//         }
-
-//         if (indexBox == 2) {
-//             if (id > 10) {
-//                 operadores[indexQuestion - 1].innerText = '';
-//                 operadores[indexQuestion - 1].style.border = "none";
-//                 limitNumberBox(indexQuestion, indexBox, id, 2);
-
-//                 operadores[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/operadores/${id}.png" alt="">`;
-//             }
-//         }
-
-//         if (indexBox == 3) {
-//             if (id < 10) {
-//                 box3[indexQuestion - 1].innerText = '';
-//                 box3[indexQuestion - 1].style.border = "none";
-//                 limitNumberBox(indexQuestion, indexBox, id, 2);
-
-//                 for (var index in atividade.questao[indexQuestion][indexBox]) {
-//                     var id = atividade.questao[indexQuestion][indexBox].substr(index, 1)
-//                     box3[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/${theme}/${id}.png" alt="">`;
-//                 }
-//             }
-//         }
-
-//         if (indexBox == 4) {
-//             if (id < 10) {
-//                 resultado[indexQuestion - 1].innerText = '';
-//                 resultado[indexQuestion - 1].style.border = "none";
-//                 limitNumberBox(indexQuestion, indexBox, id, 3);
-
-//                 for (var index in atividade.questao[indexQuestion][indexBox]) {
-//                     var id = atividade.questao[indexQuestion][indexBox].substr(index, 1)
-//                     resultado[indexQuestion - 1].innerHTML += `<img src="../../images/numbers/${theme}/${id}.png" alt="">`;
-//                 }
-//                 // console.log(atividade.questao[indexQuestion]);
-//             }
-//         }
-//     }
-// }
-
-
-// function limitNumberBox(question, box, number, limit) {
-//     var quantidade = atividade.questao[question][box].length
-//     if (quantidade == 0 || quantidade == limit) {
-//         atividade.questao[question][box] = String(number);
-//     } else {
-//         atividade.questao[question][box] += String(number);
-//     }
-// }
-
-
-
-// function validationQuestion(question) {
-//     var campoVazio = false;
-//     var indexVazio = 0;
-
-//     for (var i = 1; i <= 4; i++) {
-//         if (atividade.questao[question][i].length == 0) {
-//             campoVazio = true;
-//             indexVazio = i;
-//             break;
-//         }
-//     }
-
-//     if (campoVazio) {
-//         if (indexVazio == 2) {
-//             alert(`Um operador deve ser escolhido na questão ${question} !`);
-//         } else if (indexVazio == 4) {
-//             alert(`Um Resultado deve ser escolhido na questão ${question} !`);
-//         } else {
-//             alert(`Um Número deve ser escolhido na questão ${question} !`);
-//         }
-
-//     } else {
-//         if (question != 10) {
-//             window.location.href = `#Question${question + 1}`;
-//         } else {
-//             window.location.href = `#configuracoes`;
-//             exibeAba(false);
-//         }
-//     }
-// }
-
-
-
-
-
-
-
-
-
-function backQuestion(id) {
-    if (id == 1) {
-        window.location = "#inicio";
-        limpaDados();
-    } else {
-        window.location = `#Question${id - 1}`;
-        exibeAba(true);
-    }
-}
-
-function gravarDados() {
-    console.log("função para gravar dados")
-}
-
-// function limpaDados() {
-//     var inputs = document.getElementsByTagName("input");
-
-//     selectTheme("padrao", 0);
-//     for (i = 0; i <= 2; i++) {
-//         inputs[i].value = '';
-//         atividade.descricao = '';
-//         atividade.data_inicio = '';
-//         atividade.data_fim = '';
-//     }
-
-//     for (var i = 0; i <= 9; i++) {
-//         box1[i].innerHTML = '';
-//         box1[i].innerText = 'Clique aqui e escolha um número';
-//         box1[i].style.border = "1px dashed whitesmoke";
-//         box3[i].innerHTML = '';
-//         box3[i].innerText = 'Clique aqui e escolha um número';
-//         box3[i].style.border = "1px dashed whitesmoke";
-//         operadores[i].innerHTML = '';
-//         operadores[i].innerText = 'Clique aqui e escolha um operador';
-//         operadores[i].style.border = "1px dashed whitesmoke";
-//         resultado[i].innerHTML = '';
-//         resultado[i].innerText = 'Clique aqui e escolha o Resultado';
-//         resultado[i].style.border = "1px dashed whitesmoke";
-//         atividade.questao[i + 1][1] = '';
-//         atividade.questao[i + 1][2] = '';
-//         atividade.questao[i + 1][3] = '';
-//         atividade.questao[i + 1][4] = '';
-//     }
 

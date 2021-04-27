@@ -528,21 +528,20 @@ div#avatar img {
 }
 
 div#backgroundGray {
-	display: none;
+	display: block;
 	background-color: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	top: 0;
 	width: 100%;
 	height: 100%;
 }
-
 div.container-iframe {
 	background-color: white;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 92%;
     height: 97%;
-    margin: 1% 10%;
+    margin: 1% 4%;
     border-radius: 5px;
 	border: 1px solid white;
 

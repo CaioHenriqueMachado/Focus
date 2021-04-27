@@ -6,7 +6,7 @@
     color: whitesmoke;
     font-family: Oswald, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 
 input,
@@ -15,7 +15,11 @@ textarea {
   font-family: 400 18px Oswald, Helvetica, sans-serif;
 }
 
-input,option, select {
+a {
+    text-decoration: none;
+}
+
+input,option, select, textarea {
     color: black;
     background-color: white;
     width: 200px;
@@ -23,6 +27,16 @@ input,option, select {
     font-size: 14pt;
     padding-left: 20px;
     border-radius: 5px;
+}
+
+textarea {
+    padding: 5px;
+    width: 300px;
+    height: 100px;
+}
+
+input[type=file] {
+    width: 400px;
 }
 
 select {
@@ -169,7 +183,7 @@ div#SaveConfigs {
 
 div.question {
     height: 100vh;
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
     font-size: 24px;
@@ -279,80 +293,6 @@ div.btn-save:hover {
     background-color: rgba(13, 163, 13, 0.692);
 }
 
-div.mini-box {
-    width: 200px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border:  1px dashed whitesmoke;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-div.mini-box img{
-    width: 100px;
-    height: 100%;
-}
-
-div#operador {
-    width: 100px;
-}
-
-div#sinalIgual {
-    width: 100px;
-    font-size: 50px;
-    cursor:default;
-    border:  none;
-}
-
-div#sinalIgual img {
-    width: 100%;
-}
-
-div#resultado {
-    width: 300px;
-}
-
-div#check {
-    width: 100px;
-    cursor:default;
-    border: none;
-    display: flex;
-    flex-direction: column;
-}
-
-div#check img.check {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    filter: brightness(20%);
-    cursor: pointer;
-    transition: 0.2s;
-    margin: 5px;
-}
-
-div#check img.check:hover, div.backIcon:hover  {
-    transition: 0.2s;
-    filter: brightness(100%);
-}
-
-div.backIcon {
-    display: flex;
-    justify-content: center;
-    width: 70px;
-    height: 70px;
-    background-color: rgb(255, 6, 6);
-    border-radius: 50%;
-    filter: brightness(20%);
-    cursor: pointer;
-}
-
-div.backIcon img.back {
-    width: 70%;
-    height: 100%;
-}
 
 div.window {
     width: 60%;
@@ -376,4 +316,28 @@ div.images {
 div.images img {
     width: 100%;
     height: 100%;
+}
+
+
+div#blackBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../../images/numbers/padrao/background.jpg);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+}
+
+div#blackBlock h1:first-child { 
+    margin-top: 100px;
+}
+
+div#blackBlock h1{
+    
+    color: black;
+    font-size: 32pt;
 }

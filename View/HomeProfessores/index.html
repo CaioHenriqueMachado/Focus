@@ -40,7 +40,7 @@
 
                         <div class="background">
 
-                            <div class="buttonCreate" onclick="openTask()">+ | CRIAR ATIVIDADE</div>
+                            <div class="buttonCreate" onclick="CreateActivity(true)">+ | CRIAR ATIVIDADE</div>
 
                             <div class="box primary-color">
                                 <h3>ATIVIDADES CRIADAS</h3>
@@ -235,15 +235,8 @@
             </div>
         </main>
     </div>
-    <div id="backgroundGray">
-        <div class="container-iframe">
-            <div class="border">
-                <h2>Focus</h2>
-                <div class="buttonExit" onclick="closeTask()">X</div>
-            </div>
-            <iframe id="frame" src="../Atividades/Atividade01/index.html" frameborder="0"></iframe>
-        </div>
-    </div>
+    <div id="openCreateActivity"></div>
+    <div id="doActivity"></div>
     <script src="../../Model/js/configuration.js"></script>
 </body>
 </html>
