@@ -230,14 +230,19 @@ div.btn-calcular:hover {
 
 
 div.box-result {
-    display: flex;
+    display: none;
     margin-top: 10px;
-    width: 80%;
-    height: 150px;
+    max-width: 90%;
+    height: 100px;
     border:  2px solid whitesmoke;
     border-radius: 10px;
+    padding: 5px 0;
+    justify-content: center;
 }
 
+div.box-result img {
+    max-width: 80px;
+}
 
 div.btn-question {
     display: flex;
@@ -350,11 +355,11 @@ div.backIcon img.back {
 }
 
 div.window {
-    width: 79%;
+    width: 60%;
     height: 120px;
-    display: flex;
+    display: none;
     bottom: 0;
-    margin: 0 10%;
+    margin: 0 20%;
     position: fixed;
     background-color: whitesmoke;
     border: 5px solid black;
@@ -363,7 +368,7 @@ div.window {
 }
 
 div.images {
-    width: 74px;
+    width: 100%;
     border: 1px solid black;
     cursor: pointer;
 }

@@ -21,39 +21,35 @@
             <h2>Configurações</h2>
 
             Nome da Tarefa
-            <input type="text" name="Nome da Tarefa" id="">
+            <input type="text" name="Nome da Tarefa" id="description">
             <br>
             Quantidade de Questões
-            <select name="Quantidade de Questões" id="">
+            <select name="Quantidade de Questões" id="quantity_question">
                 <option value="" selected>Selecione</option>
-                <option value="">1 Questão</option>
-                <option value="">2 Questões</option>
-                <option value="">3 Questões</option>
-                <option value="">4 Questões</option>
-                <option value="">5 Questões</option>
-                <option value="">6 Questões</option>
-                <option value="">7 Questões</option>
-                <option value="">8 Questões</option>
-                <option value="">9 Questões</option>
-                <option value="">10 Questões</option>
-
+                <option value="1">1 Questão</option>
+                <option value="2">2 Questões</option>
+                <option value="3">3 Questões</option>
+                <option value="4">4 Questões</option>
+                <option value="5">5 Questões</option>
+                <option value="6">6 Questões</option>
+                <option value="7">7 Questões</option>
+                <option value="8">8 Questões</option>
+                <option value="9">9 Questões</option>
+                <option value="10">10 Questões</option>
             </select>
-
-            <br>
             <div>
                 <div>
                     Data de abertura
-                    <input type="date" name="Data de abertura" id="">
+                    <input type="date" name="Data de abertura" id="data_inicio">
                 </div>
 
                 <div>
                     Data de finalização
-                    <input type="date" name="Data de finalização" id="">
+                    <input type="date" name="Data de finalização" id="data_fim">
                 </div>
             </div>
 
             <div>
-                <div class="btn-config" id="Back" onclick="backQuestion(11)">Voltar</div>
                 <div class="btn-config" id="SaveConfigs" onclick="validationConfig()">Salvar</div>
             </div>
         </div>
@@ -95,10 +91,8 @@
                     <img src="../../images/icons/emoji_monster3.svg" alt="">
                     Monstros 3
                 </div>
-
             </div>
-
-            <a href="#Question1">Avançar</a>
+            <a href="#Question1" onclick="exibeAba(false)">Avançar</a>
         </div>
     </div>
 
@@ -110,15 +104,15 @@
             Escolha o primeiro número
             <input class="input-1" type="number" name="" id="">
             Selecione uma operação
-            <select class="input-2" name="operações" id="truta">
+            <select class="input-2" name="operações" >
                 <option value="" selected>Selecione</option>
                 <option value="11">Soma (+)</option>
                 <option value="12">Subtração (-)</option>
-                <option value="13">Divisão (/)</option>
-                <option value="14">Multiplicação (x)</option>
+                <option value="14">Divisão (/)</option>
+                <option value="13">Multiplicação (x)</option>
             </select>
             Escolha o segundo número
-            <input class="input-3" type="number" name="" id="">
+            <input class="input-3" type="number" name="" id="" min="-999" max="999">
 
             <div class="btn-calculos">
                 <div class="btn-limpar">
@@ -130,7 +124,7 @@
             </div>
         </div>
 
-        <div class="box-result">
+        <div class="box-result ocult">
             <!-- <img src="../../images/numbers/operadores/igual.png" alt=""> -->
         </div>
 
@@ -138,7 +132,7 @@
             <div class="btn-anterior">
                 Questão Anterior
             </div>
-            <div class="btn-save">
+            <div class="btn-save ocult">
                 Salvar Questão
             </div>
         </div>
@@ -470,7 +464,7 @@
         </div>
     </div>
 
-    <!-- <div class="window" id="window">
+    <div class="window" id="window">
         <div class="images" onclick="selectedFigure(0)">
             <img class="imageTheme" src="../../images/numbers/padrao/0.png" alt="">
         </div>
@@ -501,19 +495,7 @@
         <div class="images" onclick="selectedFigure(9)">
             <img class="imageTheme" src="../../images/numbers/padrao/9.png" alt="">
         </div>
-        <div class="images" onclick="selectedFigure(11)">
-            <img class="imageTheme" src="../../images/numbers/operadores/11.png" alt="">
-        </div>
-        <div class="images" onclick="selectedFigure(12)">
-            <img class="imageTheme" src="../../images/numbers/operadores/12.png" alt="">
-        </div>
-        <div class="images" onclick="selectedFigure(13)">
-            <img class="imageTheme" src="../../images/numbers/operadores/13.png" alt="">
-        </div>
-        <div class="images" onclick="selectedFigure(14)">
-            <img class="imageTheme" src="../../images/numbers/operadores/14.png" alt="">
-        </div>
-    </div> -->
+    </div>
 
 
     <script src="../../../Model/js/configCreateActivity.js"></script>
