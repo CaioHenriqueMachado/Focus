@@ -93,7 +93,7 @@ function Activity(id, open) {
                     <h2>Focus</h2>
                     <div class="buttonExit" onclick="Activity(${id}, false)">X</div>
                 </div>
-                <iframe id="frame" src="../Atividades/doActivity/index.html" frameborder="0"></iframe>
+                <iframe id="frame" src="../Atividades/doActivity/index${id}.html" frameborder="0"></iframe>
             </div>
         </div>`
     }else {
