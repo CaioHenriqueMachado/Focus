@@ -219,7 +219,8 @@ div.background div.box div.backWhite{
 
 div.background div.box div.backWhite div.itemTarefa {
     background-color: #d4c2ff;
-    width: 98%;
+	width: 98%;
+	height: 65px;
     border-radius: 10px;
     margin-top: 5px;
     border: 3px solid black;

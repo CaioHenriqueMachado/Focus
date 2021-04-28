@@ -1,3 +1,6 @@
+
+
+
 // OBJETO
 
 var atividade = {
@@ -58,6 +61,8 @@ function validationConfig() {
         createQuestion(atividade.qdt_questoes);
         window.location.href = `#inicio`;
         exibeAba(true);
+        addintable('atividade');
+
     }
 }
 
@@ -253,4 +258,20 @@ function inputBox(question, numberBox) {
 }
 
 
+
+
+
+
+
+function addintable(descricao){
+    console.log("chama")
+    var db = openDatabase("db_Focus", "1.0", "Teste Web SQL Database", 200000);
+    try {db.transaction(function(transaction){
+        transaction.executeSql(`INSERT INTO tb_atividades (id, descricao, tema, data_inicio, data_fim,qdt_questoes) VALUES ('3', '${descricao}', 'datas','ini', 'ds','122')`);
+    
+    });}
+    catch(e){
+        console.log(e)
+    }
+}
 

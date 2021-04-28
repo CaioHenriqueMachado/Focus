@@ -15,6 +15,10 @@ textarea {
   font-family: 400 18px Oswald, Helvetica, sans-serif;
 }
 
+.scroll {
+    overflow-y: scroll !important;
+}
+
 
 body {
     width: 100%;

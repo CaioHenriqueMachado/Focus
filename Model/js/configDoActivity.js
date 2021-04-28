@@ -157,6 +157,7 @@ function validationConfig() {
     if (confirm(`Você irá concluir atividade!`)){
         var notaFinal = compararDados();
         gravarDados();
+        document.getElementById("html").classList.add("scroll");
         alert(`Sua nota foi: ${notaFinal},00!`);
         window.location.href = `#inicio`;
     }
